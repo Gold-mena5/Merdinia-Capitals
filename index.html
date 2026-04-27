@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Merdinia Capital | Global Forex, Crypto & Investment Broker</title>
+    <meta name="description" content="Merdinia Capital - Professional Forex & Crypto trading platform. Deposit, trade, and earn with verified brokers. Global access, secure withdrawals.">
+    <meta name="keywords" content="Merdinia Capital, forex trading, crypto broker, investment platform, global broker, managed trading">
+    <meta name="author" content="Merdinia Capital">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Merdinia Capital | Global Trade. Smart Capital.">
+    <meta property="og:description" content="Trade Forex & Crypto with confidence. Professional broker with managed trading.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://merdinia.com">
+    <link rel="canonical" href="https://merdinia.com">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏦</text></svg>">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "Merdinia Capital",
+        "description": "Global Forex & Cryptocurrency Broker Platform",
+        "url": "https://merdinia.com",
+        "areaServed": "Worldwide"
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-primary: #060b1f;
+            --bg-secondary: #0c1238;
+            --bg-card: #131b4d;
+            --accent: #c9a84c;
+            --accent-hover: #b8922f;
+            --gold: #d4af37;
+            --gold-light: #f0d68a;
+            --danger: #c0392b;
+            --success: #27ae60;
+            --text: #e8eaf0;
+            --text-muted: #8890b5;
+            --border: rgba(255,255,255,0.06);
+            --shadow: 0 8px 32px rgba(0,0,0,0.5);
+            --radius: 14px;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .bg-particles {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.04;
+            background: radial-gradient(circle at 15% 40%, #c9a84c 0%, transparent 50%),
+                        radial-gradient(circle at 85% 25%, #d4af37 0%, transparent 50%),
+                        radial-gradient(circle at 50% 75%, #f0d68a 0%, transparent 50%);
+        }
+
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            background: rgba(6, 11, 31, 0.97);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--accent), var(--gold-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--bg-primary);
+            font-weight: 900;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 13px;
+            transition: var(--transition);
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        .nav-btns { display: flex; gap: 12px; align-items: center; }
+
+        .btn-outline {
+            padding: 10px 22px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            background: transparent;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-outline:hover { background: var(--accent); color: var(--bg-primary); }
+
+        .btn-primary {
+            padding: 10px 22px;
+            background: var(--accent);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 700;
+            transition: var(--transition);
+            text-decoration: none;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201,168,76,0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        .hero {
+            padding: 150px 25px 100px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201,168,76,0.08);
+            border: 1px solid rgba(201,168,76,0.25);
+            padding: 9px 22px;
+            border-radius: 50px;
+            font-size: 13px;
+            color: var(--accent);
+            margin-bottom: 28px;
+            animation: fadeInDown 0.8s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 22px;
+            background: linear-gradient(135deg, #fff 0%, #c9a84c 40%, #f0d68a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 2vw, 20px);
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+            letter-spacing: 0.2px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .stat {
+            text-align: center;
+            background: var(--bg-card);
+            padding: 25px 35px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .stat:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+        .stat-number { font-size: 36px; font-weight: 800; color: var(--accent); }
+        .stat-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-top: 6px; }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .btn-lg {
+            padding: 18px 40px;
+            font-size: 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-lg-primary {
+            background: linear-gradient(135deg, var(--accent), var(--gold));
+            color: var(--bg-primary);
+            border: none;
+        }
+
+        .btn-lg-primary:hover {
+            background: linear-gradient(135deg, var(--accent-hover), var(--accent));
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(201,168,76,0.35);
+        }
+
+        .btn-lg-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-lg-outline:hover { border-color: var(--accent); background: rgba(201,168,76,0.05); }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ticker-bar {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 0;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ticker-content {
+            display: flex;
+            gap: 70px;
+            animation: ticker 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .ticker-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .ticker-up { color: var(--success); }
+        .ticker-down { color: var(--danger); }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        section {
+            padding: 80px 25px;
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(30px, 4vw, 44px);
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #fff;
+            letter-spacing: -0.3px;
+        }
+
+        .section-header .accent-text { color: var(--accent); }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 17px;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 35px 28px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--accent);
+            transition: height 0.3s ease;
+        }
+
+        .feature-card:hover::before { height: 100%; }
+        .feature-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: var(--shadow); }
+
+        .feature-icon {
+            width: 65px;
+            height: 65px;
+            background: rgba(201,168,76,0.08);
+            border: 1px solid rgba(201,168,76,0.2);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+        }
+
+        .feature-card h3 { font-size: 19px; color: #fff; margin-bottom: 10px; }
+        .feature-card p { color: var(--text-muted); font-size: 14px; line-height: 1.7; }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            counter-reset: step;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            padding: 35px 25px 30px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            text-align: center;
+            position: relative;
+            counter-increment: step;
+        }
+
+        .step-card::before {
+            content: counter(step);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--accent), var(--gold));
+            color: var(--bg-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .step-card h3 { font-size: 18px; color: #fff; margin: 15px 0 10px; }
+        .step-card p { color: var(--text-muted); font-size: 13px; }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .dash-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .dash-card:hover { border-color: var(--accent); }
+
+        .dash-card h3 {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .dash-balance {
+            font-size: 42px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -1px;
+        }
+
+        .dash-change { font-size: 13px; margin-top: 6px; }
+        .dash-change.up { color: var(--success); }
+        .dash-change.down { color: var(--danger); }
+
+        .table-container {
+            overflow-x: auto;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            margin-top: 30px;
+        }
+
+        table { width: 100%; border-collapse: collapse; }
+
+        th {
+            text-align: left;
+            padding: 16px 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 16px 20px;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+
+        .status-badge {
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .status-pending { background: rgba(212,175,55,0.12); color: var(--gold); }
+        .status-completed { background: rgba(39,174,96,0.12); color: var(--success); }
+        .status-hold { background: rgba(192,57,43,0.12); color: var(--danger); }
+
+        .form-card {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .form-card h3 { font-size: 24px; color: #fff; margin-bottom: 25px; text-align: center; }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 15px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(201,168,76,0.08);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 500px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        .upload-area {
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            padding: 35px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--bg-secondary);
+            margin-bottom: 15px;
+        }
+
+        .upload-area:hover { border-color: var(--accent); background: rgba(201,168,76,0.02); }
+        .upload-area input { display: none; }
+        .upload-icon-text { font-size: 40px; margin-bottom: 10px; }
+        .upload-text-small { font-size: 13px; color: var(--text-muted); }
+        .file-name-display { font-size: 12px; color: var(--success); margin-top: 5px; }
+
+        .bank-info-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .bank-info-box .bank-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .bank-info-box .bank-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .bank-info-box .bank-value { color: var(--accent); font-weight: 700; }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--accent), var(--gold));
+            color: var(--bg-primary);
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, var(--accent-hover), var(--accent));
+            transform: translateY(-2px);
+        }
+
+        .success-msg {
+            background: rgba(39,174,96,0.08);
+            border: 1px solid var(--success);
+            color: var(--success);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .note-box {
+            background: rgba(201,168,76,0.06);
+            border: 1px solid rgba(201,168,76,0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 13px;
+            color: var(--accent);
+        }
+
+        .hold-timer {
+            background: rgba(192,57,43,0.06);
+            border: 1px solid rgba(192,57,43,0.2);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .hold-timer .timer-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--danger);
+            letter-spacing: 2px;
+        }
+
+        .hold-timer .timer-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            height: 8px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--danger), var(--accent));
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active { display: flex; }
+
+        .modal {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 85vh;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px; right: 15px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover { color: var(--danger); }
+
+        .modal h2 { font-size: 24px; color: #fff; margin-bottom: 25px; text-align: center; }
+
+        .modal-link { color: var(--accent); text-decoration: none; font-weight: 600; cursor: pointer; }
+        .modal-link:hover { text-decoration: underline; }
+
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 60px 25px 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 { font-size: 17px; color: #fff; margin-bottom: 20px; }
+        .footer-col p, .footer-col a {
+            color: var(--text-muted);
+            text-decoration: none;
+            line-height: 2.2;
+            font-size: 13px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            max-width: 1300px;
+            margin: 40px auto 0;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        .admin-tabs {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 15px;
+        }
+
+        .admin-tab {
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: transparent;
+            border: 1px solid transparent;
+            transition: var(--transition);
+            letter-spacing: 0.5px;
+        }
+
+        .admin-tab.active { background: var(--accent); color: var(--bg-primary); border-color: var(--accent); }
+        .admin-tab:hover:not(.active) { color: #fff; border-color: var(--border); }
+
+        .admin-content { display: none; }
+        .admin-content.active { display: block; }
+
+        .admin-action-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 700;
+            border: none;
+            transition: var(--transition);
+            margin: 2px;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-approve { background: var(--success); color: #fff; }
+        .btn-approve:hover { opacity: 0.85; }
+        .btn-reject { background: var(--danger); color: #fff; }
+        .btn-reject:hover { opacity: 0.85; }
+
+        .admin-list-item {
+            background: var(--bg-secondary);
+            padding: 14px;
+            margin: 6px 0;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .admin-list-item:hover { border-color: var(--border); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { padding: 120px 15px 60px; }
+            .hero-stats { gap: 15px; }
+            .stat { padding: 15px 20px; }
+            .stat-number { font-size: 24px; }
+            .dash-balance { font-size: 28px; }
+            .form-card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-particles"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">M</div>
+                Merdinia<span style="color: var(--accent);">Capital</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#deposit">Deposit</a></li>
+                <li><a href="#withdraw">Withdraw</a></li>
+                <li><a href="#verify">Verify ID</a></li>
+            </ul>
+            <div class="nav-btns">
+                <a href="#" class="btn-outline" onclick="openModal('loginModal')">Log In</a>
+                <a href="#" class="btn-primary" onclick="openModal('signupModal')">Sign Up</a>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-badge">✦ Trusted Global Broker Platform</div>
+        <h1>Global Trade.<br>Smart Capital.</h1>
+        <p class="hero-subtitle">
+            Merdinia Capital — Your gateway to professional Forex & Crypto trading. Deposit funds, get verified, and let our expert traders grow your portfolio.
+        </p>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">$4.8M+</div>
+                <div class="stat-label">Assets Managed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">3,200+</div>
+                <div class="stat-label">Global Investors</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">99.2%</div>
+                <div class="stat-label">Client Retention</div>
+            </div>
+        </div>
+        <div class="hero-cta-group">
+            <a href="#" class="btn-lg btn-lg-primary" onclick="openModal('signupModal')">Start Investing →</a>
+            <a href="#features" class="btn-lg btn-lg-outline">Discover More ↓</a>
+        </div>
+    </header>
+
+    <!-- Live Ticker -->
+    <div class="ticker-bar">
+        <div class="ticker-content">
+            <div class="ticker-item">BTC/USD <span class="ticker-up">$68,150.42 ▲3.1%</span></div>
+            <div class="ticker-item">ETH/USD <span class="ticker-down">$3,512.80 ▼0.6%</span></div>
+            <div class="ticker-item">XAU/USD <span class="ticker-up">$2,378.55 ▲1.4%</span></div>
+            <div class="ticker-item">EUR/USD <span class="ticker-up">1.0924 ▲0.4%</span></div>
+            <div class="ticker-item">GBP/USD <span class="ticker-up">1.2710 ▲0.7%</span></div>
+            <div class="ticker-item">USDT/NGN <span class="ticker-up">₦1,562 ▲0.8%</span></div>
+            <div class="ticker-item">BTC/USD <span class="ticker-up">$68,150.42 ▲3.1%</span></div>
+            <div class="ticker-item">ETH/USD <span class="ticker-down">$3,512.80 ▼0.6%</span></div>
+            <div class="ticker-item">XAU/USD <span class="ticker-up">$2,378.55 ▲1.4%</span></div>
+            <div class="ticker-item">EUR/USD <span class="ticker-up">1.0924 ▲0.4%</span></div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="section-header">
+            <h2>Why <span class="accent-text">Merdinia Capital</span></h2>
+            <p>Built for the modern global investor. Secure, transparent, and profitable.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Verified & Secure</h3>
+                <p>Strict ID & Face verification protects every account. Your security is our priority.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Expert Management</h3>
+                <p>Professional traders manage funds on proven platforms with transparent tracking.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast Payouts</h3>
+                <p>48-hour verification hold ensures security, then quick withdrawal to your account.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Global Access</h3>
+                <p>Open to investors worldwide with multiple currency support.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Live Tracking</h3>
+                <p>Monitor your portfolio and balance in real-time from any device.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Direct Support</h3>
+                <p>Contact our team directly whenever you need assistance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section>
+        <div class="section-header">
+            <h2>How It Works</h2>
+            <p>Get started in 4 simple steps</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <h3>Register</h3>
+                <p>Create your account with basic details and select your country.</p>
+            </div>
+            <div class="step-card">
+                <h3>Verify Identity</h3>
+                <p>Upload ID card & Face ID. 48-hour verification review.</p>
+            </div>
+            <div class="step-card">
+                <h3>Deposit Funds</h3>
+                <p>Fund your account using our provided payment details.</p>
+            </div>
+            <div class="step-card">
+                <h3>Earn & Withdraw</h3>
+                <p>We trade for you. Request withdrawals whenever you need.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+        <div class="section-header">
+            <h2>📊 Your Dashboard</h2>
+            <p>Real-time portfolio overview</p>
+        </div>
+        <div class="dashboard-grid">
+            <div class="dash-card">
+                <h3>Total Balance</h3>
+                <div class="dash-balance" id="userBalance">$0.00</div>
+                <div class="dash-change up" id="userChange">+0.0% this week</div>
+            </div>
+            <div class="dash-card">
+                <h3>Active Investments</h3>
+                <div class="dash-balance" style="font-size:28px;" id="activeInvestments">0</div>
+                <div class="dash-change" style="color:var(--accent);">Running trades</div>
+            </div>
+            <div class="dash-card">
+                <h3>Pending Withdrawals</h3>
+                <div class="dash-balance" style="font-size:28px;color:var(--gold);" id="pendingWithdrawals">$0.00</div>
+                <div class="dash-change" style="color:var(--gold);" id="holdStatus">No pending requests</div>
+            </div>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Date</th><th>Type</th><th>Amount</th><th>Status</th></tr>
+                </thead>
+                <tbody id="transactionTable">
+                    <tr><td colspan="4" style="text-align:center;padding:40px;color:var(--text-muted);">Log in to view your transactions.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Deposit Section -->
+    <section id="deposit">
+        <div class="section-header">
+            <h2>💰 Deposit Funds</h2>
+            <p>Fund your account to start trading</p>
+        </div>
+        <div class="form-card">
+            <h3>Make a Deposit</h3>
+            <div class="form-group">
+                <label>Amount ($)</label>
+                <input type="number" id="depositAmount" placeholder="e.g., 1000" min="100">
+            </div>
+            <div class="form-group">
+                <label>Payment Method</label>
+                <select id="depositMethod">
+                    <option value="bank">Bank Transfer</option>
+                    <option value="crypto">Cryptocurrency</option>
+                    <option value="card">Card Payment</option>
+                </select>
+            </div>
+            <div class="bank-info-box" id="bankDetailsBox">
+                <div class="bank-label">🏦 Payment Details</div>
+                <div id="bankDetailsContent">
+                    <p style="color:var(--text-muted);font-size:13px;text-align:center;">Admin has not set payment details yet. Please contact support.</p>
+                </div>
+            </div>
+            <div class="upload-area" onclick="document.getElementById('depositReceipt').click()">
+                <div class="upload-icon-text">📸</div>
+                <p class="upload-text-small">Upload Payment Receipt / Screenshot</p>
+                <p class="file-name-display" id="depositFileName"></p>
+                <input type="file" id="depositReceipt" accept="image/*" onchange="handleFile(event, 'depositFileName')">
+            </div>
+            <button class="submit-btn" onclick="submitDeposit()">Submit Deposit →</button>
+            <div class="success-msg" id="depositSuccess">✅ Deposit submitted! Admin will verify and update your balance.</div>
+        </div>
+    </section>
+
+    <!-- Withdraw Section -->
+    <section id="withdraw">
+        <div class="section-header">
+            <h2>💸 Withdraw Funds</h2>
+            <p>Request a payout</p>
+        </div>
+        <div class="form-card">
+            <h3>Request Withdrawal</h3>
+            <div class="hold-timer" id="holdTimerBox" style="display:none;">
+                <p class="timer-label">⏳ Security Hold - Verification Period</p>
+                <div class="timer-number" id="timerDisplay">48:00:00</div>
+                <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%;"></div></div>
+                <p style="font-size:11px;color:var(--text-muted);margin-top:8px;">Funds released after 48-hour security review</p>
+            </div>
+            <div class="form-group">
+                <label>Amount ($)</label>
+                <input type="number" id="withdrawAmount" placeholder="Enter amount" min="100">
+            </div>
+            <div class="form-group">
+                <label>Bank Name</label>
+                <input type="text" id="withdrawBank" placeholder="Your bank name">
+            </div>
+            <div class="form-group">
+                <label>Account Number</label>
+                <input type="text" id="withdrawAccount" placeholder="Your account number">
+            </div>
+            <div class="form-group">
+                <label>Account Holder Name</label>
+                <input type="text" id="withdrawAccountName" placeholder="Name on bank account">
+            </div>
+            <div class="upload-area" onclick="document.getElementById('withdrawFace').click()">
+                <div class="upload-icon-text">🤳</div>
+                <p class="upload-text-small">Upload Face ID for Withdrawal Confirmation</p>
+                <p class="file-name-display" id="withdrawFileName"></p>
+                <input type="file" id="withdrawFace" accept="image/*" onchange="handleFile(event, 'withdrawFileName')">
+            </div>
+            <button class="submit-btn" onclick="submitWithdrawal()">Request Withdrawal →</button>
+            <div class="success-msg" id="withdrawSuccess">✅ Request submitted! 48-hour verification hold started.</div>
+        </div>
+    </section>
+
+    <!-- ID Verification Section -->
+    <section id="verify">
+        <div class="section-header">
+            <h2>🆔 Verify Your Identity</h2>
+            <p>Required before trading can begin</p>
+        </div>
+        <div class="form-card">
+            <h3>Upload Verification Documents</h3>
+            <div class="form-group">
+                <label>ID Type</label>
+                <select id="idType">
+                    <option value="">Select ID Type</option>
+                    <option value="passport">International Passport</option>
+                    <option value="national">National ID Card</option>
+                    <option value="drivers">Driver's License</option>
+                    <option value="voter">Voter's Card</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>ID Number</label>
+                <input type="text" id="idNumber" placeholder="Document number">
+            </div>
+            <div class="upload-area" onclick="document.getElementById('idFront').click()">
+                <div class="upload-icon-text">📄</div>
+                <p class="upload-text-small">ID Card (Front)</p>
+                <p class="file-name-display" id="idFrontName"></p>
+                <input type="file" id="idFront" accept="image/*" onchange="handleFile(event, 'idFrontName')">
+            </div>
+            <div class="upload-area" onclick="document.getElementById('idBack').click()">
+                <div class="upload-icon-text">📄</div>
+                <p class="upload-text-small">ID Card (Back)</p>
+                <p class="file-name-display" id="idBackName"></p>
+                <input type="file" id="idBack" accept="image/*" onchange="handleFile(event, 'idBackName')">
+            </div>
+            <div class="upload-area" onclick="document.getElementById('faceId').click()">
+                <div class="upload-icon-text">🤳</div>
+                <p class="upload-text-small">Face ID (Clear Selfie)</p>
+                <p class="file-name-display" id="faceIdName"></p>
+                <input type="file" id="faceId" accept="image/*" onchange="handleFile(event, 'faceIdName')">
+            </div>
+            <button class="submit-btn" onclick="submitVerification()">Submit for Verification →</button>
+            <div class="success-msg" id="verifySuccess">✅ Documents submitted! 48-hour review in progress.</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>🏦 Merdinia Capital</h4>
+                <p>Your trusted partner for Forex & Crypto trading. Global reach, local trust.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#features">Features</a>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#deposit">Deposit</a>
+                <a href="#withdraw">Withdraw</a>
+                <a href="#verify">Verify ID</a>
+            </div>
+            <div class="footer-col" id="footerContact">
+                <h4>Contact</h4>
+                <p>Admin contact details coming soon.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Merdinia Capital. All rights reserved. | <a href="#" onclick="openModal('adminLoginModal')" style="color:var(--text-muted);cursor:pointer;">🔑 Admin</a></p>
+        </div>
+    </footer>
+
+    <!-- Sign Up Modal -->
+    <div class="modal-overlay" id="signupModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('signupModal')">✕</button>
+            <h2>Create Account</h2>
+            <div class="form-row">
+                <div class="form-group"><label>Full Name</label><input type="text" id="signupName" placeholder="John Doe"></div>
+                <div class="form-group"><label>Email</label><input type="email" id="signupEmail" placeholder="you@email.com"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group"><label>Phone</label><input type="tel" id="signupPhone" placeholder="+1 234 567 8900"></div>
+                <div class="form-group">
+                    <label>Country</label>
+                    <select id="signupCountry">
+                        <option value="">Select Country</option>
+                        <option value="NG">🇳🇬 Nigeria</option>
+                        <option value="GH">🇬🇭 Ghana</option>
+                        <option value="KE">🇰🇪 Kenya</option>
+                        <option value="ZA">🇿🇦 South Africa</option>
+                        <option value="US">🇺🇸 United States</option>
+                        <option value="GB">🇬🇧 United Kingdom</option>
+                        <option value="CA">🇨🇦 Canada</option>
+                        <option value="AE">🇦🇪 UAE</option>
+                        <option value="DE">🇩🇪 Germany</option>
+                        <option value="FR">🇫🇷 France</option>
+                        <option value="Other">🌍 Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group"><label>Password</label><input type="password" id="signupPassword" placeholder="Min 6 characters"></div>
+            <button class="submit-btn" onclick="signupUser()">Create Account →</button>
+            <p style="text-align:center;margin-top:15px;font-size:13px;color:var(--text-muted);">Already have an account? <a href="#" class="modal-link" onclick="switchModal('signupModal','loginModal')">Log In</a></p>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('loginModal')">✕</button>
+            <h2>Welcome Back</h2>
+            <div class="form-group"><label>Email</label><input type="email" id="loginEmail" placeholder="you@email.com"></div>
+            <div class="form-group"><label>Password</label><input type="password" id="loginPassword" placeholder="Enter password"></div>
+            <button class="submit-btn" onclick="loginUser()">Log In →</button>
+            <p style="text-align:center;margin-top:15px;font-size:13px;color:var(--text-muted);">Don't have an account? <a href="#" class="modal-link" onclick="switchModal('loginModal','signupModal')">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="modal-overlay" id="adminLoginModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('adminLoginModal')">✕</button>
+            <h2>🔐 Admin Login</h2>
+            <div class="form-group"><label>Username</label><input type="text" id="adminUser" placeholder="Username"></div>
+            <div class="form-group"><label>Password</label><input type="password" id="adminPass" placeholder="Password"></div>
+            <button class="submit-btn" onclick="adminLogin()">Access Admin Panel</button>
+            <p id="adminError" style="color:var(--danger);text-align:center;margin-top:10px;display:none;">Invalid credentials!</p>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div class="modal-overlay" id="adminPanelModal">
+        <div class="modal" style="max-width:750px;">
+            <button class="modal-close" onclick="closeModal('adminPanelModal')">✕</button>
+            <h2>🛠️ Admin Panel</h2>
+            <p style="text-align:center;color:var(--accent);margin-bottom:20px;">Welcome, Admin | <a href="#" onclick="adminLogout()" style="color:var(--danger);">Logout</a></p>
+
+            <div class="admin-tabs">
+                <button class="admin-tab active" onclick="switchAdminTab('settings')">⚙️ Settings</button>
+                <button class="admin-tab" onclick="switchAdminTab('users')">👥 Users</button>
+                <button class="admin-tab" onclick="switchAdminTab('deposits')">💰 Deposits</button>
+                <button class="admin-tab" onclick="switchAdminTab('withdrawals')">💸 Withdrawals</button>
+                <button class="admin-tab" onclick="switchAdminTab('verifications')">🆔 Verifications</button>
+                <button class="admin-tab" onclick="switchAdminTab('balances')">📊 Balances</button>
+            </div>
+
+            <!-- Settings Tab -->
+            <div class="admin-content active" id="tab-settings">
+                <h4 style="margin-bottom:15px;color:var(--accent);">⚙️ Admin Settings</h4>
+                <p style="font-size:12px;color:var(--text-muted);margin-bottom:20px;">Fill in your details below. These will appear on the customer dashboard and deposit pages.</p>
+                
+                <div class="form-group">
+                    <label>Company Display Name</label>
+                    <input type="text" id="settingCompanyName" placeholder="e.g., Merdinia Capital">
+                </div>
+                <div class="form-group">
+                    <label>Admin Email (for receiving notifications)</label>
+                    <input type="email" id="settingEmail" placeholder="e.g., admin@merdinia.com">
+                </div>
+                <div class="form-group">
+                    <label>WhatsApp Number (optional, include country code)</label>
+                    <input type="text" id="settingWhatsapp" placeholder="e.g., 2348137760372">
+                </div>
+                <div class="form-group">
+                    <label>Bank Name</label>
+                    <input type="text" id="settingBankName" placeholder="e.g., MoniePoint, Access Bank">
+                </div>
+                <div class="form-group">
+                    <label>Bank Account Number</label>
+                    <input type="text" id="settingAccountNumber" placeholder="e.g., 8052562742">
+                </div>
+                <div class="form-group">
+                    <label>Account Holder Name</label>
+                    <input type="text" id="settingAccountName" placeholder="e.g., Goodluck Ikoyo">
+                </div>
+                <div class="form-group">
+                    <label>Business Address</label>
+                    <textarea id="settingAddress" rows="2" placeholder="e.g., 123 Business Street, City, Country"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Crypto Wallet Address (for crypto deposits)</label>
+                    <input type="text" id="settingCryptoWallet" placeholder="e.g., USDT (TRC20) wallet address">
+                </div>
+                <button class="submit-btn" onclick="saveAdminSettings()">💾 Save Settings</button>
+                <div class="success-msg" id="settingsSaved">✅ Settings saved successfully!</div>
+            </div>
+
+            <!-- Users Tab -->
+            <div class="admin-content" id="tab-users">
+                <h4 style="margin-bottom:15px;">Registered Users</h4>
+                <div id="adminUsersList" style="font-size:13px;color:var(--text-muted);">No users yet.</div>
+            </div>
+
+            <!-- Deposits Tab -->
+            <div class="admin-content" id="tab-deposits">
+                <h4 style="margin-bottom:15px;">Pending Deposits</h4>
+                <div id="adminDepositsList" style="font-size:13px;color:var(--text-muted);">No pending deposits.</div>
+            </div>
+
+            <!-- Withdrawals Tab -->
+            <div class="admin-content" id="tab-withdrawals">
+                <h4 style="margin-bottom:15px;">Pending Withdrawals</h4>
+                <div id="adminWithdrawalsList" style="font-size:13px;color:var(--text-muted);">No pending withdrawals.</div>
+            </div>
+
+            <!-- Verifications Tab -->
+            <div class="admin-content" id="tab-verifications">
+                <h4 style="margin-bottom:15px;">ID Verifications</h4>
+                <div id="adminVerificationsList" style="font-size:13px;color:var(--text-muted);">No pending verifications.</div>
+            </div>
+
+            <!-- Balances Tab -->
+            <div class="admin-content" id="tab-balances">
+                <h4 style="margin-bottom:15px;">Update User Balance Manually</h4>
+                <div class="form-group">
+                    <label>Select User</label>
+                    <select id="balanceUserSelect" style="width:100%;padding:12px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;color:#fff;">
+                        <option value="">Select User</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>New Balance ($)</label>
+                    <input type="number" id="newBalanceAmount" placeholder="Enter new balance amount">
+                </div>
+                <button class="submit-btn" onclick="updateUserBalance()">Update Balance</button>
+                <p style="font-size:11px;color:var(--text-muted);margin-top:8px;">This manually overrides the user's display balance. Use after verifying deposits or processing withdrawals.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============ CONSTANTS ============
+        const ADMIN_USER = "The creator";
+        const ADMIN_PASS = "Doreen56?";
+        let currentUser = null;
+        let isAdmin = false;
+
+        // ============ DATA HELPERS ============
+        function getData(key) { return JSON.parse(localStorage.getItem('merdinia_' + key)) || []; }
+        function saveData(key, data) { localStorage.setItem('merdinia_' + key, JSON.stringify(data)); }
+        function getSettings() { return JSON.parse(localStorage.getItem('merdinia_settings')) || {}; }
+        function saveSettings(settings) { localStorage.setItem('merdinia_settings', JSON.stringify(settings)); }
+
+        // ============ MODAL FUNCTIONS ============
+        function openModal(id) { document.getElementById(id).classList.add('active'); }
+        function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+        function switchModal(closeId, openId) { closeModal(closeId); openModal(openId); }
+
+        // ============ MOBILE MENU ============
+        function toggleMobileMenu() {
+            const nav = document.getElementById('navLinks');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '70px';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.background = 'rgba(6,11,31,0.98)';
+                nav.style.padding = '20px';
+                nav.style.gap = '15px';
+                nav.style.zIndex = '999';
+            }
+        }
+
+        // ============ FILE HANDLING ============
+        function handleFile(event, displayId) {
+            const file = event.target.files[0];
+            if (file) {
+                document.getElementById(displayId).textContent = '📎 ' + file.name;
+            }
+        }
+
+        // ============ AUTH ============
+        function signupUser() {
+            const name = document.getElementById('signupName').value.trim();
+            const email = document.getElementById('signupEmail').value.trim();
+            const phone = document.getElementById('signupPhone').value.trim();
+            const country = document.getElementById('signupCountry').value;
+            const password = document.getElementById('signupPassword').value;
+
+            if (!name || !email || !country || !password) return alert('Please fill all required fields!');
+            if (password.length < 6) return alert('Password must be at least 6 characters!');
+
+            const users = getData('users');
+            if (users.find(u => u.email === email)) return alert('Email already registered!');
+
+            const user = {
+                id: Date.now(),
+                name, email, phone, country, password,
+                balance: 0,
+                verified: false,
+                createdAt: new Date().toLocaleString()
+            };
+            users.push(user);
+            saveData('users', users);
+            currentUser = user;
+            localStorage.setItem('merdinia_currentUser', user.id);
+            closeModal('signupModal');
+            updateDashboard();
+            updateBankDisplay();
+            alert('Account created successfully! Please verify your ID to start trading.');
+        }
+
+        function loginUser() {
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            const users = getData('users');
+            const user = users.find(u => u.email === email && u.password === password);
+            if (user) {
+                currentUser = user;
+                localStorage.setItem('merdinia_currentUser', user.id);
+                closeModal('loginModal');
+                updateDashboard();
+                updateBankDisplay();
+                alert('Welcome back, ' + user.name + '!');
+            } else {
+                alert('Invalid email or password!');
+            }
+        }
+
+        // ============ DEPOSIT ============
+        function submitDeposit() {
+            if (!currentUser) return alert('Please log in first!');
+            const amount = parseFloat(document.getElementById('depositAmount').value);
+            const method = document.getElementById('depositMethod').value;
+            const receiptInput = document.getElementById('depositReceipt');
+
+            if (!amount || amount < 100) return alert('Minimum deposit is $100!');
+
+            const deposits = getData('deposits');
+            const deposit = {
+                id: Date.now(),
+                userId: currentUser.id,
+                userName: currentUser.name,
+                userEmail: currentUser.email,
+                amount, method,
+                receiptName: receiptInput.files[0]?.name || 'No receipt uploaded',
+                status: 'pending',
+                date: new Date().toLocaleString()
+            };
+            deposits.push(deposit);
+            saveData('deposits', deposits);
+
+            // Notify admin via stored preferences
+            notifyAdmin('New Deposit', `${currentUser.name} deposited $${amount.toLocaleString()} via ${method}`);
+
+            document.getElementById('depositSuccess').style.display = 'block';
+            document.getElementById('depositAmount').value = '';
+            document.getElementById('depositReceipt').value = '';
+            document.getElementById('depositFileName').textContent = '';
+            setTimeout(() => document.getElementById('depositSuccess').style.display = 'none', 5000);
+            updateDashboard();
+        }
+
+        // ============ WITHDRAWAL ============
+        function submitWithdrawal() {
+            if (!currentUser) return alert('Please log in first!');
+            const amount = parseFloat(document.getElementById('withdrawAmount').value);
+            const bank = document.getElementById('withdrawBank').value.trim();
+            const account = document.getElementById('withdrawAccount').value.trim();
+            const accountName = document.getElementById('withdrawAccountName').value.trim();
+            const faceInput = document.getElementById('withdrawFace');
+
+            if (!amount || !bank || !account || !accountName) return alert('Please fill all fields!');
+            if (amount > currentUser.balance) return alert('Insufficient balance! You have $' + currentUser.balance.toLocaleString());
+
+            const withdrawals = getData('withdrawals');
+            const withdrawal = {
+                id: Date.now(),
+                userId: currentUser.id,
+                userName: currentUser.name,
+                userEmail: currentUser.email,
+                amount, bank, account, accountName,
+                faceFileName: faceInput.files[0]?.name || 'No face ID',
+                status: 'hold',
+                holdStart: Date.now(),
+                holdEnd: Date.now() + (48 * 60 * 60 * 1000),
+                date: new Date().toLocaleString()
+            };
+            withdrawals.push(withdrawal);
+            saveData('withdrawals', withdrawals);
+
+            notifyAdmin('New Withdrawal Request', `${currentUser.name} requests $${amount.toLocaleString()} to ${bank} (${account})`);
+
+            document.getElementById('withdrawSuccess').style.display = 'block';
+            document.getElementById('withdrawAmount').value = '';
+            document.getElementById('withdrawBank').value = '';
+            document.getElementById('withdrawAccount').value = '';
+            document.getElementById('withdrawAccountName').value = '';
+            document.getElementById('withdrawFace').value = '';
+            document.getElementById('withdrawFileName').textContent = '';
+            setTimeout(() => document.getElementById('withdrawSuccess').style.display = 'none', 5000);
+            updateDashboard();
+            startHoldTimer(withdrawal);
+        }
+
+        function startHoldTimer(withdrawal) {
+            const timerBox = document.getElementById('holdTimerBox');
+            const timerDisplay = document.getElementById('timerDisplay');
+            const progressFill = document.getElementById('progressFill');
+            timerBox.style.display = 'block';
+
+            const updateTimer = () => {
+                const now = Date.now();
+                const remaining = withdrawal.holdEnd - now;
+                if (remaining <= 0) {
+                    timerDisplay.textContent = '00:00:00';
+                    progressFill.style.width = '100%';
+                    progressFill.style.background = 'var(--success)';
+                    return;
+                }
+                const hrs = Math.floor(remaining / (1000*60*60));
+                const mins = Math.floor((remaining % (1000*60*60)) / (1000*60));
+                const secs = Math.floor((remaining % (1000*60)) / 1000);
+                timerDisplay.textContent = `${String(hrs).padStart(2,'0')}:${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+                const totalHold = 48*60*60*1000;
+                const elapsed = totalHold - remaining;
+                progressFill.style.width = `${(elapsed/totalHold)*100}%`;
+            };
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        // ============ VERIFICATION ============
+        function submitVerification() {
+            if (!currentUser) return alert('Please log in first!');
+            const idType = document.getElementById('idType').value;
+            const idNumber = document.getElementById('idNumber').value.trim();
+            if (!idType || !idNumber) return alert('Please fill all ID fields!');
+
+            const verifications = getData('verifications');
+            const verification = {
+                id: Date.now(),
+                userId: currentUser.id,
+                userName: currentUser.name,
+                userEmail: currentUser.email,
+                idType, idNumber,
+                frontFile: document.getElementById('idFront').files[0]?.name || 'N/A',
+                backFile: document.getElementById('idBack').files[0]?.name || 'N/A',
+                faceFile: document.getElementById('faceId').files[0]?.name || 'N/A',
+                status: 'pending',
+                date: new Date().toLocaleString()
+            };
+            verifications.push(verification);
+            saveData('verifications', verifications);
+
+            notifyAdmin('New ID Verification', `${currentUser.name} submitted ${idType}: ${idNumber}`);
+
+            document.getElementById('verifySuccess').style.display = 'block';
+            ['idType','idNumber','idFront','idBack','faceId','idFrontName','idBackName','faceIdName'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) { if (el.type === 'file') el.value = ''; else el.value = ''; }
+            });
+            setTimeout(() => document.getElementById('verifySuccess').style.display = 'none', 5000);
+        }
+
+        // ============ NOTIFICATION ============
+        function notifyAdmin(subject, message) {
+            const settings = getSettings();
+            const email = settings.email;
+            const whatsapp = settings.whatsapp;
+
+            // Store notification for admin panel
+            const notifications = getData('notifications');
+            notifications.unshift({ id: Date.now(), subject, message, date: new Date().toLocaleString(), read: false });
+            saveData('notifications', notifications);
+
+            // If email is set, open default mail client
+            if (email) {
+                const mailSubject = encodeURIComponent(`[Merdinia Capital] ${subject}`);
+                const mailBody = encodeURIComponent(`${message}\n\nLogin to admin panel to review.`);
+                // Silent — admin checks email manually or we could integrate with a service later
+            }
+
+            // If WhatsApp is set, open WhatsApp
+            if (whatsapp) {
+                const waMsg = encodeURIComponent(`*📢 ${subject}*\n\n${message}\n\n_Please review in admin panel._`);
+                window.open(`https://wa.me/${whatsapp}?text=${waMsg}`, '_blank');
+            }
+        }
+
+        // ============ DASHBOARD ============
+        function updateDashboard() {
+            if (!currentUser) {
+                document.getElementById('userBalance').textContent = '$0.00';
+                document.getElementById('activeInvestments').textContent = '0';
+                document.getElementById('pendingWithdrawals').textContent = '$0.00';
+                document.getElementById('holdStatus').textContent = 'No pending requests';
+                document.getElementById('transactionTable').innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;color:var(--text-muted);">Log in to view transactions.</td></tr>';
+                return;
+            }
+
+            const users = getData('users');
+            const updated = users.find(u => u.id === currentUser.id);
+            if (updated) currentUser = updated;
+
+            document.getElementById('userBalance').textContent = '$' + currentUser.balance.toLocaleString();
+            document.getElementById('userChange').textContent = currentUser.verified ? '+ Active Account' : 'Verify ID to start';
+
+            const deposits = getData('deposits').filter(d => d.userId === currentUser.id && d.status === 'completed');
+            document.getElementById('activeInvestments').textContent = deposits.length;
+
+            const withdrawals = getData('withdrawals').filter(w => w.userId === currentUser.id && w.status === 'hold');
+            document.getElementById('pendingWithdrawals').textContent = '$' + withdrawals.reduce((s,w) => s + w.amount, 0).toLocaleString();
+            document.getElementById('holdStatus').textContent = withdrawals.length > 0 ? `${withdrawals.length} request(s) on hold` : 'No pending requests';
+
+            const allDeposits = getData('deposits').filter(d => d.userId === currentUser.id);
+            const allWithdrawals = getData('withdrawals').filter(w => w.userId === currentUser.id);
+            let transactions = [...allDeposits.map(d=>({...d,type:'Deposit'})), ...allWithdrawals.map(w=>({...w,type:'Withdrawal'}))];
+            transactions.sort((a,b)=>b.id-a.id);
+
+            let html = '';
+            transactions.slice(0,10).forEach(t => {
+                const statusClass = t.status==='completed'?'status-completed':t.status==='hold'?'status-hold':'status-pending';
+                const statusText = t.status==='hold'?'On Hold':t.status;
+                html += `<tr><td>${t.date}</td><td>${t.type}</td><td>$${t.amount.toLocaleString()}</td><td><span class="status-badge ${statusClass}">${statusText}</span></td></tr>`;
+            });
+
+            if (transactions.length===0) html = '<tr><td colspan="4" style="text-align:center;padding:40px;color:var(--text-muted);">No transactions yet. Make a deposit to get started!</td></tr>';
+            document.getElementById('transactionTable').innerHTML = html;
+        }
+
+        function updateBankDisplay() {
+            const settings = getSettings();
+            const bankBox = document.getElementById('bankDetailsContent');
+            const footerContact = document.getElementById('footerContact');
+
+            if (settings.bankName || settings.accountNumber || settings.accountName) {
+                bankBox.innerHTML = `
+                    <div class="bank-row"><span>Bank:</span><span class="bank-value">${settings.bankName || 'N/A'}</span></div>
+                    <div class="bank-row"><span>Account:</span><span class="bank-value">${settings.accountNumber || 'N/A'}</span></div>
+                    <div class="bank-row"><span>Name:</span><span class="bank-value">${settings.accountName || 'N/A'}</span></div>
+                    ${settings.cryptoWallet ? `<div class="bank-row"><span>Crypto:</span><span class="bank-value" style="font-size:11px;">${settings.cryptoWallet}</span></div>` : ''}
+                `;
+            }
+
+            if (settings.email || settings.whatsapp || settings.address) {
+                footerContact.innerHTML = `
+                    <h4>Contact</h4>
+                    ${settings.email ? `<p>📧 ${settings.email}</p>` : ''}
+                    ${settings.whatsapp ? `<p>📞 +${settings.whatsapp}</p>` : ''}
+                    ${settings.address ? `<p>📍 ${settings.address}</p>` : ''}
+                `;
+            }
+        }
+
+        // ============ ADMIN ============
+        function adminLogin() {
+            const user = document.getElementById('adminUser').value;
+            const pass = document.getElementById('adminPass').value;
+            if (user === ADMIN_USER && pass === ADMIN_PASS) {
+                isAdmin = true;
+                closeModal('adminLoginModal');
+                openModal('adminPanelModal');
+                document.getElementById('adminError').style.display = 'none';
+                loadAdminSettings();
+                refreshAdminPanel();
+            } else {
+                document.getElementById('adminError').style.display = 'block';
+            }
+        }
+
+        function adminLogout() {
+            isAdmin = false;
+            closeModal('adminPanelModal');
+            updateBankDisplay();
+        }
+
+        function loadAdminSettings() {
+            const s = getSettings();
+            document.getElementById('settingCompanyName').value = s.companyName || '';
+            document.getElementById('settingEmail').value = s.email || '';
+            document.getElementById('settingWhatsapp').value = s.whatsapp || '';
+            document.getElementById('settingBankName').value = s.bankName || '';
+            document.getElementById('settingAccountNumber').value = s.accountNumber || '';
+            document.getElementById('settingAccountName').value = s.accountName || '';
+            document.getElementById('settingAddress').value = s.address || '';
+            document.getElementById('settingCryptoWallet').value = s.cryptoWallet || '';
+        }
+
+        function saveAdminSettings() {
+            const settings = {
+                companyName: document.getElementById('settingCompanyName').value.trim(),
+                email: document.getElementById('settingEmail').value.trim(),
+                whatsapp: document.getElementById('settingWhatsapp').value.trim(),
+                bankName: document.getElementById('settingBankName').value.trim(),
+                accountNumber: document.getElementById('settingAccountNumber').value.trim(),
+                accountName: document.getElementById('settingAccountName').value.trim(),
+                address: document.getElementById('settingAddress').value.trim(),
+                cryptoWallet: document.getElementById('settingCryptoWallet').value.trim()
+            };
+            saveSettings(settings);
+            updateBankDisplay();
+            document.getElementById('settingsSaved').style.display = 'block';
+            setTimeout(() => document.getElementById('settingsSaved').style.display = 'none', 3000);
+        }
+
+        function switchAdminTab(tab) {
+            document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.admin-content').forEach(c => c.classList.remove('active'));
+            const tabs = ['settings','users','deposits','withdrawals','verifications','balances'];
+            const idx = tabs.indexOf(tab);
+            if (idx >= 0) {
+                document.querySelectorAll('.admin-tab')[idx].classList.add('active');
+                document.getElementById('tab-' + tab).classList.add('active');
+            }
+            refreshAdminPanel();
+        }
+
+        function refreshAdminPanel() {
+            if (!isAdmin) return;
+
+            const users = getData('users');
+            document.getElementById('adminUsersList').innerHTML = users.length===0 ? 'No users yet.' :
+                users.map(u => `<div class="admin-list-item" style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>${u.name} (${u.email}) - ${u.country} - Balance: $${u.balance.toLocaleString()}</span>
+                    <span class="status-badge ${u.verified?'status-completed':'status-pending'}">${u.verified?'Verified':'Unverified'}</span>
+                </div>`).join('');
+
+            const deposits = getData('deposits');
+            document.getElementById('adminDepositsList').innerHTML = deposits.length===0 ? 'No pending deposits.' :
+                deposits.map(d => `<div class="admin-list-item">
+                    <p><strong>${d.userName}</strong> - $${d.amount.toLocaleString()} - ${d.method}</p>
+                    <p style="font-size:11px;color:var(--text-muted);">Receipt: ${d.receiptName} | ${d.date}</p>
+                    <button class="admin-action-btn btn-approve" onclick="approveDeposit(${d.id})">Approve</button>
+                    <button class="admin-action-btn btn-reject" onclick="rejectDeposit(${d.id})">Reject</button>
+                    <span class="status-badge ${d.status==='completed'?'status-completed':d.status==='rejected'?'status-hold':'status-pending'}">${d.status}</span>
+                </div>`).join('');
+
+            const withdrawals = getData('withdrawals');
+            document.getElementById('adminWithdrawalsList').innerHTML = withdrawals.length===0 ? 'No pending withdrawals.' :
+                withdrawals.map(w => `<div class="admin-list-item">
+                    <p><strong>${w.userName}</strong> - $${w.amount.toLocaleString()} - ${w.bank} (${w.account})</p>
+                    <p style="font-size:11px;color:var(--text-muted);">Face ID: ${w.faceFileName} | ${w.date}</p>
+                    <button class="admin-action-btn btn-approve" onclick="approveWithdrawal(${w.id})">Mark Paid</button>
+                    <button class="admin-action-btn btn-reject" onclick="rejectWithdrawal(${w.id})">Reject</button>
+                    <span class="status-badge ${w.status==='completed'?'status-completed':w.status==='rejected'?'status-hold':'status-hold'}">${w.status}</span>
+                </div>`).join('');
+
+            const verifications = getData('verifications');
+            document.getElementById('adminVerificationsList').innerHTML = verifications.length===0 ? 'No pending verifications.' :
+                verifications.map(v => `<div class="admin-list-item">
+                    <p><strong>${v.userName}</strong> - ${v.idType}: ${v.idNumber}</p>
+                    <p style="font-size:11px;color:var(--text-muted);">Files: ${v.frontFile}, ${v.backFile}, ${v.faceFile}</p>
+                    <button class="admin-action-btn btn-approve" onclick="approveVerification(${v.id})">Approve</button>
+                    <button class="admin-action-btn btn-reject" onclick="rejectVerification(${v.id})">Reject</button>
+                    <span class="status-badge ${v.status==='approved'?'status-completed':'status-pending'}">${v.status}</span>
+                </div>`).join('');
+
+            const select = document.getElementById('balanceUserSelect');
+            select.innerHTML = '<option value="">Select User</option>' + users.map(u => `<option value="${u.email}">${u.name} (${u.email}) - $${u.balance.toLocaleString()}</option>`).join('');
+        }
+
+        function approveDeposit(id) {
+            const deposits = getData('deposits');
+            const deposit = deposits.find(d => d.id === id);
+            if (deposit) {
+                deposit.status = 'completed';
+                saveData('deposits', deposits);
+                const users = getData('users');
+                const user = users.find(u => u.id === deposit.userId);
+                if (user) { user.balance += deposit.amount; saveData('users', users); if (currentUser && currentUser.id === user.id) currentUser = user; }
+                updateDashboard();
+                refreshAdminPanel();
+                alert(`Deposit of $${deposit.amount.toLocaleString()} approved for ${deposit.userName}!`);
+            }
+        }
+
+        function rejectDeposit(id) {
+            const deposits = getData('deposits');
+            const deposit = deposits.find(d => d.id === id);
+            if (deposit && confirm(`Reject deposit from ${deposit.userName}?`)) {
+                deposit.status = 'rejected';
+                saveData('deposits', deposits);
+                refreshAdminPanel();
+            }
+        }
+
+        function approveWithdrawal(id) {
+            const withdrawals = getData('withdrawals');
+            const withdrawal = withdrawals.find(w => w.id === id);
+            if (withdrawal) {
+                withdrawal.status = 'completed';
+                saveData('withdrawals', withdrawals);
+                const users = getData('users');
+                const user = users.find(u => u.id === withdrawal.userId);
+                if (user) { user.balance = Math.max(0, user.balance - withdrawal.amount); saveData('users', users); if (currentUser && currentUser.id === user.id) currentUser = user; }
+                updateDashboard();
+                refreshAdminPanel();
+                alert(`Withdrawal of $${withdrawal.amount.toLocaleString()} marked as PAID. Send funds to ${withdrawal.userName} now!`);
+            }
+        }
+
+        function rejectWithdrawal(id) {
+            const withdrawals = getData('withdrawals');
+            const withdrawal = withdrawals.find(w => w.id === id);
+            if (withdrawal && confirm(`Reject withdrawal from ${withdrawal.userName}? Funds will return to their balance.`)) {
+                withdrawal.status = 'rejected';
+                saveData('withdrawals', withdrawals);
+                refreshAdminPanel();
+            }
+        }
+
+        function approveVerification(id) {
+            const verifications = getData('verifications');
+            const verification = verifications.find(v => v.id === id);
+            if (verification) {
+                verification.status = 'approved';
+                saveData('verifications', verifications);
+                const users = getData('users');
+                const user = users.find(u => u.id === verification.userId);
+                if (user) { user.verified = true; saveData('users', users); }
+                refreshAdminPanel();
+                alert(`ID verified for ${verification.userName}!`);
+            }
+        }
+
+        function rejectVerification(id) {
+            const verifications = getData('verifications');
+            const verification = verifications.find(v => v.id === id);
+            if (verification && confirm(`Reject verification for ${verification.userName}?`)) {
+                verification.status = 'rejected';
+                saveData('verifications', verifications);
+                refreshAdminPanel();
+            }
+        }
+
+        function updateUserBalance() {
+            const email = document.getElementById('balanceUserSelect').value;
+            const newBalance = parseFloat(document.getElementById('newBalanceAmount').value);
+            if (!email || isNaN(newBalance)) return alert('Select user and enter valid amount!');
+            const users = getData('users');
+            const user = users.find(u => u.email === email);
+            if (user) {
+                user.balance = newBalance;
+                saveData('users', users);
+                if (currentUser && currentUser.id === user.id) currentUser = user;
+                updateDashboard();
+                refreshAdminPanel();
+                alert(`Balance updated for ${user.name}: $${newBalance.toLocaleString()}`);
+            }
+        }
+
+        // ============ INIT ============
+        function init() {
+            updateBankDisplay();
+
+            const savedUserId = localStorage.getItem('merdinia_currentUser');
+            if (savedUserId) {
+                const users = getData('users');
+                currentUser = users.find(u => u.id === parseInt(savedUserId)) || null;
+                updateDashboard();
+            }
+
+            if (currentUser) {
+                const withdrawals = getData('withdrawals').filter(w => w.userId === currentUser.id && w.status === 'hold');
+                if (withdrawals.length > 0) startHoldTimer(withdrawals[0]);
+            }
+        }
+
+        init();
+        console.log('✅ Merdinia Capital - Platform Ready');
+        console.log('👤 Admin Login: Username="The creator" | Password="Doreen56?"');
+        console.log('⚙️ After login, go to Settings tab to add your bank details, email, and contact info.');
+        console.log('📋 All fields are blank — fill them with your own business information.');
+    </script>
+</body>
+      </html>
