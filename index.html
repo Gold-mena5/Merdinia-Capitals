@@ -140,9 +140,92 @@
         .upload-icon-text{font-size:40px;margin-bottom:10px;}
         .upload-text-small{font-size:13px;color:var(--text-muted);}
         .file-name-display{font-size:12px;color:var(--success);margin-top:5px;}
-        .bank-info-box{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px;}
-        .bank-info-box .bank-label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;}
-        .bank-info-box .bank-row{display:flex;justify-content:space-between;padding:8px 0;font-size:14px;font-weight:600;}
+
+        /* Payment Button Styles */
+        .payment-button-box{
+            background:linear-gradient(135deg, rgba(201,168,76,0.1), rgba(212,175,55,0.05));
+            border:2px solid var(--accent);
+            border-radius:16px;
+            padding:30px;
+            text-align:center;
+            margin-bottom:20px;
+            transition:var(--transition);
+        }
+        .payment-button-box:hover{
+            border-color:var(--gold-light);
+            box-shadow:0 0 30px rgba(201,168,76,0.15);
+        }
+        .payment-button-box .payment-label{
+            font-size:13px;
+            color:var(--text-muted);
+            text-transform:uppercase;
+            letter-spacing:2px;
+            margin-bottom:8px;
+        }
+        .payment-button-box .payment-provider{
+            font-size:20px;
+            font-weight:700;
+            color:#fff;
+            margin-bottom:20px;
+        }
+        .payment-button-box .payment-provider span{
+            color:var(--accent);
+        }
+        .pay-now-btn{
+            display:inline-flex;
+            align-items:center;
+            gap:10px;
+            padding:18px 45px;
+            background:linear-gradient(135deg, #f5a623, #f7b731);
+            color:#000;
+            border-radius:14px;
+            text-decoration:none;
+            font-weight:700;
+            font-size:17px;
+            transition:all 0.3s ease;
+            letter-spacing:0.5px;
+            box-shadow:0 8px 25px rgba(245,166,35,0.3);
+        }
+        .pay-now-btn:hover{
+            background:linear-gradient(135deg, #f7b731, #f5a623);
+            transform:translateY(-3px);
+            box-shadow:0 12px 35px rgba(245,166,35,0.45);
+        }
+        .pay-now-btn .btn-icon{
+            font-size:22px;
+        }
+        .secure-badge{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+            margin-top:12px;
+            font-size:11px;
+            color:var(--text-muted);
+        }
+        .secure-badge .lock{color:var(--success);}
+
+        .bank-info-box{
+            background:var(--bg-secondary);
+            border:1px solid var(--border);
+            border-radius:12px;
+            padding:22px;
+            margin-bottom:20px;
+        }
+        .bank-info-box .bank-label{
+            font-size:11px;
+            color:var(--text-muted);
+            text-transform:uppercase;
+            letter-spacing:2px;
+            margin-bottom:12px;
+        }
+        .bank-info-box .bank-row{
+            display:flex;
+            justify-content:space-between;
+            padding:8px 0;
+            font-size:14px;
+            font-weight:600;
+        }
         .bank-info-box .bank-value{color:var(--accent);font-weight:700;}
         .submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--accent),var(--gold));color:var(--bg-primary);border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;transition:var(--transition);}
         .submit-btn:hover{background:linear-gradient(135deg,var(--accent-hover),var(--accent));transform:translateY(-2px);}
@@ -177,7 +260,7 @@
         .btn-reject{background:var(--danger);color:#fff;}.btn-reject:hover{opacity:0.85;}
         .admin-list-item{background:var(--bg-secondary);padding:14px;margin:6px 0;border-radius:10px;border:1px solid transparent;transition:var(--transition);}
         .admin-list-item:hover{border-color:var(--border);}
-        @media(max-width:768px){.nav-links{display:none;}.mobile-menu-btn{display:block;}.hero{padding:120px 15px 60px;}.hero-stats{gap:15px;}.stat{padding:15px 20px;}.stat-number{font-size:24px;}.dash-balance{font-size:28px;}.form-card{padding:25px;}}
+        @media(max-width:768px){.nav-links{display:none;}.mobile-menu-btn{display:block;}.hero{padding:120px 15px 60px;}.hero-stats{gap:15px;}.stat{padding:15px 20px;}.stat-number{font-size:24px;}.dash-balance{font-size:28px;}.form-card{padding:25px;}.pay-now-btn{padding:14px 30px;font-size:15px;}}
     </style>
 </head>
 <body>
@@ -258,7 +341,7 @@
     <div class="steps-grid">
         <div class="step-card"><h3>Register</h3><p>Create your account with basic details and country.</p></div>
         <div class="step-card"><h3>Verify Identity</h3><p>Upload ID card & Face ID for 48-hour review.</p></div>
-        <div class="step-card"><h3>Deposit Funds</h3><p>Fund your account using provided payment details.</p></div>
+        <div class="step-card"><h3>Deposit Funds</h3><p>Fund your account securely via Flutterwave.</p></div>
         <div class="step-card"><h3>Earn & Withdraw</h3><p>We trade for you. Request withdrawals anytime.</p></div>
     </div>
 </section>
@@ -279,14 +362,29 @@
 
 <!-- Deposit -->
 <section id="deposit">
-    <div class="section-header"><h2>💰 Deposit Funds</h2><p>Fund your account to start trading</p></div>
+    <div class="section-header"><h2>💰 Deposit Funds</h2><p>Fund your account securely to start trading</p></div>
     <div class="form-card">
         <h3>Make a Deposit</h3>
+        
+        <!-- Flutterwave Payment Button -->
+        <div class="payment-button-box">
+            <div class="payment-label">Secure Payment Via</div>
+            <div class="payment-provider">Flutter<span>wave</span></div>
+            <a href="https://flutterwave.com/pay/mlf7bn34ikyi" target="_blank" class="pay-now-btn">
+                <span class="btn-icon">💳</span> Pay Now via Flutterwave →
+            </a>
+            <div class="secure-badge">
+                <span class="lock">🔒</span> Secured by Flutterwave • All major cards accepted
+            </div>
+        </div>
+
+        <p style="text-align:center;color:var(--text-muted);font-size:13px;margin:20px 0;">— or enter deposit details below —</p>
+
         <div class="form-group"><label>Amount ($)</label><input type="number" id="depositAmount" placeholder="e.g., 1000" min="100"></div>
-        <div class="form-group"><label>Payment Method</label><select id="depositMethod"><option value="bank">Bank Transfer</option><option value="crypto">Cryptocurrency</option><option value="card">Card Payment</option></select></div>
-        <div class="bank-info-box"><div class="bank-label">🏦 Payment Details</div><div id="bankDetailsContent"><p style="color:var(--text-muted);font-size:13px;text-align:center;">Admin has not set payment details yet.</p></div></div>
-        <div class="upload-area" onclick="document.getElementById('depositReceipt').click()"><div class="upload-icon-text">📸</div><p class="upload-text-small">Upload Payment Receipt</p><p class="file-name-display" id="depositFileName"></p><input type="file" id="depositReceipt" accept="image/*" onchange="handleFile(event,'depositFileName')"></div>
-        <button class="submit-btn" onclick="submitDeposit()">Submit Deposit →</button>
+        <div class="form-group"><label>Payment Method</label><select id="depositMethod"><option value="flutterwave">Flutterwave (Card/Bank)</option><option value="bank">Bank Transfer</option><option value="crypto">Cryptocurrency</option></select></div>
+        
+        <div class="upload-area" onclick="document.getElementById('depositReceipt').click()"><div class="upload-icon-text">📸</div><p class="upload-text-small">Upload Payment Receipt / Screenshot</p><p class="file-name-display" id="depositFileName"></p><input type="file" id="depositReceipt" accept="image/*" onchange="handleFile(event,'depositFileName')"></div>
+        <button class="submit-btn" onclick="submitDeposit()">Submit Deposit Confirmation →</button>
         <div class="success-msg" id="depositSuccess">✅ Deposit submitted! Admin will verify and update your balance.</div>
     </div>
 </section>
@@ -327,7 +425,7 @@
     <div class="footer-grid">
         <div class="footer-col"><h4>🏦 Merdinia Capital</h4><p>Your trusted partner for Forex & Crypto trading. Global reach, local trust.</p></div>
         <div class="footer-col"><h4>Quick Links</h4><a href="#features">Features</a><a href="#dashboard">Dashboard</a><a href="#deposit">Deposit</a><a href="#withdraw">Withdraw</a><a href="#verify">Verify ID</a></div>
-        <div class="footer-col" id="footerContact"><h4>Contact</h4><p>Admin contact details coming soon.</p></div>
+        <div class="footer-col" id="footerContact"><h4>Contact</h4><p>📧 mena352_5@zohomail.com</p><p>📞 +44 7828 751507</p></div>
     </div>
     <div class="footer-bottom"><p>© 2026 Merdinia Capital. All rights reserved. | <a href="#" onclick="openModal('adminLoginModal')" style="color:var(--text-muted);cursor:pointer;">🔑 Admin</a></p></div>
 </footer>
@@ -379,10 +477,11 @@
     <div class="admin-content active" id="tab-settings">
         <h4 style="margin-bottom:15px;color:var(--accent);">⚙️ Admin Settings</h4>
         <p style="font-size:12px;color:var(--text-muted);margin-bottom:20px;">Fill in your business details below. They appear on the customer deposit page and footer.</p>
-        <div class="form-group"><label>Company Display Name</label><input type="text" id="settingCompanyName" placeholder="e.g., Merdinia Capital"></div>
-        <div class="form-group"><label>Admin Email (for notifications)</label><input type="email" id="settingEmail" placeholder="e.g., admin@merdinia.com"></div>
-        <div class="form-group"><label>WhatsApp Number (optional, with country code)</label><input type="text" id="settingWhatsapp" placeholder="e.g., 2348137760372"></div>
-        <div class="form-group"><label>Bank Name</label><input type="text" id="settingBankName" placeholder="e.g., MoniePoint, Access Bank"></div>
+        <div class="form-group"><label>Company Display Name</label><input type="text" id="settingCompanyName" value="Merdinia Capital Investment"></div>
+        <div class="form-group"><label>Admin Email (for notifications)</label><input type="email" id="settingEmail" value="mena352_5@zohomail.com"></div>
+        <div class="form-group"><label>WhatsApp Number (optional, with country code)</label><input type="text" id="settingWhatsapp" value="+44 7828 751507"></div>
+        <div class="form-group"><label>Flutterwave Payment Link</label><input type="text" id="settingFlutterwaveLink" value="https://flutterwave.com/pay/mlf7bn34ikyi"></div>
+        <div class="form-group"><label>Bank Name (for bank transfers)</label><input type="text" id="settingBankName" placeholder="e.g., MoniePoint, Access Bank"></div>
         <div class="form-group"><label>Bank Account Number</label><input type="text" id="settingAccountNumber" placeholder="e.g., 8052562742"></div>
         <div class="form-group"><label>Account Holder Name</label><input type="text" id="settingAccountName" placeholder="e.g., Goodluck Ikoyo"></div>
         <div class="form-group"><label>Business Address</label><textarea id="settingAddress" rows="2" placeholder="e.g., 123 Business Street, City, Country"></textarea></div>
@@ -442,7 +541,7 @@ function signupUser(){
     var user={id:Date.now(),name:n,email:e,phone:p,country:c,password:pw,balance:0,verified:false,createdAt:new Date().toLocaleString()};
     users.push(user);saveData('users',users);
     currentUser=user;localStorage.setItem('merdinia_currentUser',user.id);
-    closeModal('signupModal');updateDashboard();updateBankDisplay();
+    closeModal('signupModal');updateDashboard();
     alert('Account created! Please verify your ID to start trading.');
 }
 
@@ -451,7 +550,7 @@ function loginUser(){
     var pw=document.getElementById('loginPassword').value;
     var users=getData('users');
     var user=users.find(function(u){return u.email===e&&u.password===pw;});
-    if(user){currentUser=user;localStorage.setItem('merdinia_currentUser',user.id);closeModal('loginModal');updateDashboard();updateBankDisplay();alert('Welcome back, '+user.name+'!');}
+    if(user){currentUser=user;localStorage.setItem('merdinia_currentUser',user.id);closeModal('loginModal');updateDashboard();alert('Welcome back, '+user.name+'!');}
     else{alert('Invalid email or password!');}
 }
 
@@ -465,7 +564,8 @@ function submitDeposit(){
     var deposits=getData('deposits');
     deposits.push({id:Date.now(),userId:currentUser.id,userName:currentUser.name,userEmail:currentUser.email,amount:amt,method:met,receiptName:rec.files[0]?rec.files[0].name:'No receipt',status:'pending',date:new Date().toLocaleString()});
     saveData('deposits',deposits);
-    notifyAdmin('New Deposit',currentUser.name+' deposited $'+amt.toLocaleString()+' via '+met);
+    var s=getSettings();
+    if(s.whatsapp){window.open('https://wa.me/'+s.whatsapp.replace(/[^0-9]/g,'')+'?text='+encodeURIComponent('*📢 New Deposit*\n\n'+currentUser.name+' deposited $'+amt.toLocaleString()+' via '+met+'\n\n_Please verify in admin panel._'),'_blank');}
     document.getElementById('depositSuccess').style.display='block';
     document.getElementById('depositAmount').value='';document.getElementById('depositReceipt').value='';document.getElementById('depositFileName').textContent='';
     setTimeout(function(){document.getElementById('depositSuccess').style.display='none';},5000);
@@ -485,7 +585,6 @@ function submitWithdrawal(){
     var withdrawals=getData('withdrawals');
     var w={id:Date.now(),userId:currentUser.id,userName:currentUser.name,userEmail:currentUser.email,amount:amt,bank:bk,account:ac,accountName:an,faceFileName:fc.files[0]?fc.files[0].name:'No face ID',status:'hold',holdStart:Date.now(),holdEnd:Date.now()+(48*60*60*1000),date:new Date().toLocaleString()};
     withdrawals.push(w);saveData('withdrawals',withdrawals);
-    notifyAdmin('New Withdrawal',currentUser.name+' requests $'+amt.toLocaleString()+' to '+bk+' ('+ac+')');
     document.getElementById('withdrawSuccess').style.display='block';
     document.getElementById('withdrawAmount').value='';document.getElementById('withdrawBank').value='';document.getElementById('withdrawAccount').value='';document.getElementById('withdrawAccountName').value='';document.getElementById('withdrawFace').value='';document.getElementById('withdrawFileName').textContent='';
     setTimeout(function(){document.getElementById('withdrawSuccess').style.display='none';},5000);
@@ -511,20 +610,10 @@ function submitVerification(){
     var verifications=getData('verifications');
     verifications.push({id:Date.now(),userId:currentUser.id,userName:currentUser.name,userEmail:currentUser.email,idType:it,idNumber:inn,frontFile:(document.getElementById('idFront').files[0]||{}).name||'N/A',backFile:(document.getElementById('idBack').files[0]||{}).name||'N/A',faceFile:(document.getElementById('faceId').files[0]||{}).name||'N/A',status:'pending',date:new Date().toLocaleString()});
     saveData('verifications',verifications);
-    notifyAdmin('New ID Verification',currentUser.name+' submitted '+it+': '+inn);
     document.getElementById('verifySuccess').style.display='block';
     ['idType','idNumber','idFront','idBack','faceId'].forEach(function(x){var el=document.getElementById(x);if(el)el.value='';});
     ['idFrontName','idBackName','faceIdName'].forEach(function(x){document.getElementById(x).textContent='';});
     setTimeout(function(){document.getElementById('verifySuccess').style.display='none';},5000);
-}
-
-// ============ NOTIFICATION ============
-function notifyAdmin(subject,message){
-    var s=getSettings();
-    var notifs=getData('notifications');
-    notifs.unshift({id:Date.now(),subject:subject,message:message,date:new Date().toLocaleString(),read:false});
-    saveData('notifications',notifs);
-    if(s.whatsapp){window.open('https://wa.me/'+s.whatsapp+'?text='+encodeURIComponent('*📢 '+subject+'*\n\n'+message+'\n\n_Please review in admin panel._'),'_blank');}
 }
 
 // ============ DASHBOARD ============
@@ -547,51 +636,44 @@ function updateDashboard(){
     document.getElementById('transactionTable').innerHTML=html;
 }
 
-function updateBankDisplay(){
-    var s=getSettings();
-    var bc=document.getElementById('bankDetailsContent');
-    if(s.bankName||s.accountNumber||s.accountName){bc.innerHTML='<div class="bank-row"><span>Bank:</span><span class="bank-value">'+(s.bankName||'N/A')+'</span></div><div class="bank-row"><span>Account:</span><span class="bank-value">'+(s.accountNumber||'N/A')+'</span></div><div class="bank-row"><span>Name:</span><span class="bank-value">'+(s.accountName||'N/A')+'</span></div>'+(s.cryptoWallet?'<div class="bank-row"><span>Crypto:</span><span class="bank-value" style="font-size:11px;">'+s.cryptoWallet+'</span></div>':'');}
-    var fc=document.getElementById('footerContact');
-    if(s.email||s.whatsapp||s.address){fc.innerHTML='<h4>Contact</h4>'+(s.email?'<p>📧 '+s.email+'</p>':'')+(s.whatsapp?'<p>📞 +'+s.whatsapp+'</p>':'')+(s.address?'<p>📍 '+s.address+'</p>':'');}
-}
-
-// ============ ADMIN LOGIN (FIXED) ============
+// ============ ADMIN LOGIN ============
 function adminLogin(){
     var user=document.getElementById('adminUser').value.trim();
     var pass=document.getElementById('adminPass').value;
     if(user==='The creator'&&pass==='Doreen56?'){
-        isAdmin=true;
-        closeModal('adminLoginModal');
-        openModal('adminPanelModal');
-        document.getElementById('adminError').style.display='none';
-        loadAdminSettings();
-        refreshAdminPanel();
-    }else{
-        document.getElementById('adminError').style.display='block';
-    }
+        isAdmin=true;closeModal('adminLoginModal');openModal('adminPanelModal');
+        document.getElementById('adminError').style.display='none';loadAdminSettings();refreshAdminPanel();
+    }else{document.getElementById('adminError').style.display='block';}
 }
-
-function adminLogout(){isAdmin=false;closeModal('adminPanelModal');updateBankDisplay();}
-
+function adminLogout(){isAdmin=false;closeModal('adminPanelModal');}
 function loadAdminSettings(){
     var s=getSettings();
-    document.getElementById('settingCompanyName').value=s.companyName||'';
-    document.getElementById('settingEmail').value=s.email||'';
-    document.getElementById('settingWhatsapp').value=s.whatsapp||'';
+    document.getElementById('settingCompanyName').value=s.companyName||'Merdinia Capital Investment';
+    document.getElementById('settingEmail').value=s.email||'mena352_5@zohomail.com';
+    document.getElementById('settingWhatsapp').value=s.whatsapp||'+44 7828 751507';
+    document.getElementById('settingFlutterwaveLink').value=s.flutterwaveLink||'https://flutterwave.com/pay/mlf7bn34ikyi';
     document.getElementById('settingBankName').value=s.bankName||'';
     document.getElementById('settingAccountNumber').value=s.accountNumber||'';
     document.getElementById('settingAccountName').value=s.accountName||'';
     document.getElementById('settingAddress').value=s.address||'';
     document.getElementById('settingCryptoWallet').value=s.cryptoWallet||'';
 }
-
 function saveAdminSettings(){
-    var s={companyName:document.getElementById('settingCompanyName').value.trim(),email:document.getElementById('settingEmail').value.trim(),whatsapp:document.getElementById('settingWhatsapp').value.trim(),bankName:document.getElementById('settingBankName').value.trim(),accountNumber:document.getElementById('settingAccountNumber').value.trim(),accountName:document.getElementById('settingAccountName').value.trim(),address:document.getElementById('settingAddress').value.trim(),cryptoWallet:document.getElementById('settingCryptoWallet').value.trim()};
-    saveSettings(s);updateBankDisplay();
+    var s={
+        companyName:document.getElementById('settingCompanyName').value.trim(),
+        email:document.getElementById('settingEmail').value.trim(),
+        whatsapp:document.getElementById('settingWhatsapp').value.trim(),
+        flutterwaveLink:document.getElementById('settingFlutterwaveLink').value.trim(),
+        bankName:document.getElementById('settingBankName').value.trim(),
+        accountNumber:document.getElementById('settingAccountNumber').value.trim(),
+        accountName:document.getElementById('settingAccountName').value.trim(),
+        address:document.getElementById('settingAddress').value.trim(),
+        cryptoWallet:document.getElementById('settingCryptoWallet').value.trim()
+    };
+    saveSettings(s);
     document.getElementById('settingsSaved').style.display='block';
     setTimeout(function(){document.getElementById('settingsSaved').style.display='none';},3000);
 }
-
 function switchAdminTab(tab){
     document.querySelectorAll('.admin-tab').forEach(function(t){t.classList.remove('active');});
     document.querySelectorAll('.admin-content').forEach(function(c){c.classList.remove('active');});
@@ -600,7 +682,6 @@ function switchAdminTab(tab){
     if(idx>=0){document.querySelectorAll('.admin-tab')[idx].classList.add('active');document.getElementById('tab-'+tab).classList.add('active');}
     refreshAdminPanel();
 }
-
 function refreshAdminPanel(){
     if(!isAdmin)return;
     var users=getData('users');
@@ -614,7 +695,6 @@ function refreshAdminPanel(){
     var sel=document.getElementById('balanceUserSelect');
     sel.innerHTML='<option value="">Select User</option>'+users.map(function(u){return '<option value="'+u.email+'">'+u.name+' ('+u.email+') - $'+u.balance.toLocaleString()+'</option>';}).join('');
 }
-
 function approveDeposit(id){var d=getData('deposits').find(function(x){return x.id===id;});if(d){d.status='completed';saveData('deposits',getData('deposits'));var u=getData('users').find(function(x){return x.id===d.userId;});if(u){u.balance+=d.amount;saveData('users',getData('users'));if(currentUser&&currentUser.id===u.id)currentUser=u;}updateDashboard();refreshAdminPanel();alert('Deposit approved for '+d.userName+'!');}}
 function rejectDeposit(id){var d=getData('deposits').find(function(x){return x.id===id;});if(d&&confirm('Reject deposit from '+d.userName+'?')){d.status='rejected';saveData('deposits',getData('deposits'));refreshAdminPanel();}}
 function approveWithdrawal(id){var w=getData('withdrawals').find(function(x){return x.id===id;});if(w){w.status='completed';saveData('withdrawals',getData('withdrawals'));var u=getData('users').find(function(x){return x.id===w.userId;});if(u){u.balance=Math.max(0,u.balance-w.amount);saveData('users',getData('users'));if(currentUser&&currentUser.id===u.id)currentUser=u;}updateDashboard();refreshAdminPanel();alert('Withdrawal marked PAID for '+w.userName+'. Send funds now!');}}
@@ -625,7 +705,6 @@ function updateUserBalance(){var email=document.getElementById('balanceUserSelec
 
 // ============ INIT ============
 function init(){
-    updateBankDisplay();
     var uid=localStorage.getItem('merdinia_currentUser');
     if(uid){var users=getData('users');currentUser=users.find(function(u){return u.id===parseInt(uid);})||null;updateDashboard();}
     if(currentUser){var wds=getData('withdrawals').filter(function(w){return w.userId===currentUser.id&&w.status==='hold';});if(wds.length>0)startHoldTimer(wds[0]);}
@@ -633,4 +712,4 @@ function init(){
 init();
 </script>
 </body>
-                                                         </html>
+    </html>
