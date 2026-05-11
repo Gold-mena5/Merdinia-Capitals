@@ -3,504 +3,1502 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Merdinia Capital | Global Forex, Crypto & Investment Broker</title>
-    <meta name="description" content="Merdinia Capital - Professional Forex & Crypto trading platform. Global access, secure withdrawals, expert management.">
+    <meta name="description" content="Merdinia Capital - Professional Forex & Crypto trading platform. Global access, secure card payments, expert management.">
     <meta name="keywords" content="Merdinia Capital, forex trading, crypto broker, investment platform, global broker">
     <meta name="author" content="Merdinia Capital">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Merdinia Capital | Global Trade. Smart Capital.">
-    <meta property="og:description" content="Trade Forex & Crypto with confidence.">
+    <meta property="og:description" content="Trade Forex & Crypto with confidence. Secure card payments via Flutterwave.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://merdinia.com">
     <link rel="canonical" href="https://merdinia.com">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏦</text></svg>">
-    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FinancialService","name":"Merdinia Capital","description":"Global Forex & Cryptocurrency Broker Platform","url":"https://merdinia.com","areaServed":"Worldwide"}
     </script>
 
-    <style>
-        :root {
-            --bg-primary: #060b1f;
-            --bg-secondary: #0c1238;
-            --bg-card: #131b4d;
-            --accent: #c9a84c;
-            --accent-hover: #b8922f;
-            --gold: #d4af37;
-            --gold-light: #f0d68a;
-            --danger: #c0392b;
-            --success: #27ae60;
-            --text: #e8eaf0;
-            --text-muted: #8890b5;
-            --border: rgba(255,255,255,0.06);
-            --shadow: 0 8px 32px rgba(0,0,0,0.5);
-            --radius: 14px;
-            --transition: all 0.3s ease;
-        }
-        *{margin:0;padding:0;box-sizing:border-box;}
-        html{scroll-behavior:smooth;}
-        body{
-            font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
-            background:var(--bg-primary);
-            color:var(--text);
-            line-height:1.6;
-            overflow-x:hidden;
-        }
-        .bg-particles{
-            position:fixed;top:0;left:0;width:100%;height:100%;
-            pointer-events:none;z-index:0;opacity:0.04;
-            background:radial-gradient(circle at 15% 40%,#c9a84c 0%,transparent 50%),
-                       radial-gradient(circle at 85% 25%,#d4af37 0%,transparent 50%),
-                       radial-gradient(circle at 50% 75%,#f0d68a 0%,transparent 50%);
-        }
-        nav{
-            position:fixed;top:0;width:100%;background:rgba(6,11,31,0.97);
-            backdrop-filter:blur(20px);z-index:1000;padding:16px 0;
-            border-bottom:1px solid var(--border);
-        }
-        .nav-container{max-width:1300px;margin:0 auto;padding:0 25px;display:flex;justify-content:space-between;align-items:center;}
-        .logo{font-size:24px;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px;}
-        .logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--accent),var(--gold-light));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--bg-primary);font-weight:900;}
-        .nav-links{display:flex;gap:28px;list-style:none;align-items:center;}
-        .nav-links a{color:var(--text-muted);text-decoration:none;font-weight:500;font-size:13px;transition:var(--transition);}
-        .nav-links a:hover{color:var(--accent);}
-        .nav-btns{display:flex;gap:12px;align-items:center;}
-        .btn-outline{padding:10px 22px;border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:50px;cursor:pointer;font-size:13px;font-weight:600;transition:var(--transition);text-decoration:none;}
-        .btn-outline:hover{background:var(--accent);color:var(--bg-primary);}
-        .btn-primary{padding:10px 22px;background:var(--accent);color:var(--bg-primary);border:none;border-radius:50px;cursor:pointer;font-size:13px;font-weight:700;transition:var(--transition);text-decoration:none;}
-        .btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 8px 25px rgba(201,168,76,0.3);}
-        .mobile-menu-btn{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;}
-        .hero{padding:150px 25px 100px;text-align:center;position:relative;z-index:1;}
-        .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);padding:9px 22px;border-radius:50px;font-size:13px;color:var(--accent);margin-bottom:28px;animation:fadeInDown 0.8s ease;}
-        .hero h1{font-size:clamp(36px,6vw,64px);font-weight:800;line-height:1.1;margin-bottom:22px;background:linear-gradient(135deg,#fff 0%,#c9a84c 40%,#f0d68a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:fadeInUp 0.8s ease 0.1s both;}
-        .hero-subtitle{font-size:clamp(16px,2vw,20px);color:var(--text-muted);max-width:650px;margin:0 auto 40px;animation:fadeInUp 0.8s ease 0.2s both;}
-        .hero-stats{display:flex;justify-content:center;gap:50px;margin:50px 0;flex-wrap:wrap;animation:fadeInUp 0.8s ease 0.3s both;}
-        .stat{text-align:center;background:var(--bg-card);padding:25px 35px;border-radius:var(--radius);border:1px solid var(--border);transition:var(--transition);}
-        .stat:hover{border-color:var(--accent);transform:translateY(-3px);}
-        .stat-number{font-size:36px;font-weight:800;color:var(--accent);}
-        .stat-label{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:2px;margin-top:6px;}
-        .hero-cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeInUp 0.8s ease 0.4s both;}
-        .btn-lg{padding:18px 40px;font-size:16px;border-radius:50px;font-weight:700;cursor:pointer;transition:var(--transition);text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
-        .btn-lg-primary{background:linear-gradient(135deg,var(--accent),var(--gold));color:var(--bg-primary);border:none;}
-        .btn-lg-primary:hover{background:linear-gradient(135deg,var(--accent-hover),var(--accent));transform:translateY(-3px);box-shadow:0 15px 35px rgba(201,168,76,0.35);}
-        .btn-lg-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.2);}
-        .btn-lg-outline:hover{border-color:var(--accent);background:rgba(201,168,76,0.05);}
-        @keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-        @keyframes fadeInDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
-        .ticker-bar{background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:14px 0;overflow:hidden;position:relative;z-index:1;}
-        .ticker-content{display:flex;gap:70px;animation:ticker 30s linear infinite;white-space:nowrap;}
-        .ticker-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;}
-        .ticker-up{color:var(--success);}.ticker-down{color:var(--danger);}
-        @keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-        section{padding:80px 25px;max-width:1300px;margin:0 auto;position:relative;z-index:1;}
-        .section-header{text-align:center;margin-bottom:60px;}
-        .section-header h2{font-size:clamp(30px,4vw,44px);font-weight:800;margin-bottom:15px;color:#fff;}
-        .section-header .accent-text{color:var(--accent);}
-        .section-header p{color:var(--text-muted);font-size:17px;max-width:550px;margin:0 auto;}
-        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
-        .feature-card{background:var(--bg-card);padding:35px 28px;border-radius:var(--radius);border:1px solid var(--border);transition:var(--transition);text-align:center;position:relative;overflow:hidden;}
-        .feature-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:0;background:var(--accent);transition:height 0.3s ease;}
-        .feature-card:hover::before{height:100%;}
-        .feature-card:hover{transform:translateY(-8px);border-color:var(--accent);box-shadow:var(--shadow);}
-        .feature-icon{width:65px;height:65px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:30px;}
-        .feature-card h3{font-size:19px;color:#fff;margin-bottom:10px;}
-        .feature-card p{color:var(--text-muted);font-size:14px;line-height:1.7;}
-        .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;counter-reset:step;}
-        .step-card{background:var(--bg-card);padding:35px 25px 30px;border-radius:var(--radius);border:1px solid var(--border);text-align:center;position:relative;counter-increment:step;}
-        .step-card::before{content:counter(step);position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:42px;height:42px;background:linear-gradient(135deg,var(--accent),var(--gold));color:var(--bg-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;}
-        .step-card h3{font-size:18px;color:#fff;margin:15px 0 10px;}
-        .step-card p{color:var(--text-muted);font-size:13px;}
-        .dashboard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;}
-        .dash-card{background:var(--bg-card);padding:30px;border-radius:var(--radius);border:1px solid var(--border);transition:var(--transition);}
-        .dash-card:hover{border-color:var(--accent);}
-        .dash-card h3{font-size:13px;color:var(--text-muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:15px;}
-        .dash-balance{font-size:42px;font-weight:800;color:#fff;}
-        .dash-change{font-size:13px;margin-top:6px;}
-        .dash-change.up{color:var(--success);}.dash-change.down{color:var(--danger);}
-        .table-container{overflow-x:auto;background:var(--bg-card);border-radius:var(--radius);border:1px solid var(--border);margin-top:30px;}
-        table{width:100%;border-collapse:collapse;}
-        th{text-align:left;padding:16px 20px;font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--text-muted);border-bottom:1px solid var(--border);}
-        td{padding:16px 20px;font-size:14px;border-bottom:1px solid rgba(255,255,255,0.02);}
-        .status-badge{padding:5px 14px;border-radius:50px;font-size:11px;font-weight:700;}
-        .status-pending{background:rgba(212,175,55,0.12);color:var(--gold);}
-        .status-completed{background:rgba(39,174,96,0.12);color:var(--success);}
-        .status-hold{background:rgba(192,57,43,0.12);color:var(--danger);}
-        .form-card{background:var(--bg-card);padding:40px;border-radius:var(--radius);border:1px solid var(--border);max-width:550px;margin:0 auto;}
-        .form-card h3{font-size:24px;color:#fff;margin-bottom:25px;text-align:center;}
-        .form-group{margin-bottom:20px;}
-        .form-group label{display:block;margin-bottom:7px;font-weight:600;font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;}
-        .form-group input,.form-group select,.form-group textarea{width:100%;padding:14px 18px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;color:#fff;font-size:15px;font-family:inherit;transition:var(--transition);}
-        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(201,168,76,0.08);}
-        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
-        @media(max-width:500px){.form-row{grid-template-columns:1fr;}}
-        .upload-area{border:2px dashed var(--border);border-radius:12px;padding:35px;text-align:center;cursor:pointer;transition:var(--transition);background:var(--bg-secondary);margin-bottom:15px;}
-        .upload-area:hover{border-color:var(--accent);background:rgba(201,168,76,0.02);}
-        .upload-area input{display:none;}
-        .upload-icon-text{font-size:40px;margin-bottom:10px;}
-        .upload-text-small{font-size:13px;color:var(--text-muted);}
-        .file-name-display{font-size:12px;color:var(--success);margin-top:5px;}
+<style>
+:root {
+    --bg: #03060f;
+    --bg2: #080e1e;
+    --bg3: #0d1428;
+    --card: #111827;
+    --card2: #161f35;
+    --gold: #c8a84b;
+    --gold2: #e4c76b;
+    --gold3: #f5dfa0;
+    --green: #22c55e;
+    --red: #ef4444;
+    --blue: #3b82f6;
+    --text: #f0f2f8;
+    --muted: #6b7a9f;
+    --border: rgba(255,255,255,0.06);
+    --border2: rgba(200,168,75,0.18);
+    --shadow: 0 20px 60px rgba(0,0,0,0.6);
+    --r: 12px;
+    --flw: #f5a623;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+    font-family:'DM Sans',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
 
-        /* Payment Button Styles */
-        .payment-button-box{
-            background:linear-gradient(135deg, rgba(201,168,76,0.1), rgba(212,175,55,0.05));
-            border:2px solid var(--accent);
-            border-radius:16px;
-            padding:30px;
-            text-align:center;
-            margin-bottom:20px;
-            transition:var(--transition);
-        }
-        .payment-button-box:hover{
-            border-color:var(--gold-light);
-            box-shadow:0 0 30px rgba(201,168,76,0.15);
-        }
-        .payment-button-box .payment-label{
-            font-size:13px;
-            color:var(--text-muted);
-            text-transform:uppercase;
-            letter-spacing:2px;
-            margin-bottom:8px;
-        }
-        .payment-button-box .payment-provider{
-            font-size:20px;
-            font-weight:700;
-            color:#fff;
-            margin-bottom:20px;
-        }
-        .payment-button-box .payment-provider span{
-            color:var(--accent);
-        }
-        .pay-now-btn{
-            display:inline-flex;
-            align-items:center;
-            gap:10px;
-            padding:18px 45px;
-            background:linear-gradient(135deg, #f5a623, #f7b731);
-            color:#000;
-            border-radius:14px;
-            text-decoration:none;
-            font-weight:700;
-            font-size:17px;
-            transition:all 0.3s ease;
-            letter-spacing:0.5px;
-            box-shadow:0 8px 25px rgba(245,166,35,0.3);
-        }
-        .pay-now-btn:hover{
-            background:linear-gradient(135deg, #f7b731, #f5a623);
-            transform:translateY(-3px);
-            box-shadow:0 12px 35px rgba(245,166,35,0.45);
-        }
-        .pay-now-btn .btn-icon{
-            font-size:22px;
-        }
-        .secure-badge{
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            gap:8px;
-            margin-top:12px;
-            font-size:11px;
-            color:var(--text-muted);
-        }
-        .secure-badge .lock{color:var(--success);}
+/* ── NOISE OVERLAY ── */
+body::before{
+    content:'';position:fixed;inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events:none;z-index:0;opacity:0.4;
+}
 
-        .bank-info-box{
-            background:var(--bg-secondary);
-            border:1px solid var(--border);
-            border-radius:12px;
-            padding:22px;
-            margin-bottom:20px;
-        }
-        .bank-info-box .bank-label{
-            font-size:11px;
-            color:var(--text-muted);
-            text-transform:uppercase;
-            letter-spacing:2px;
-            margin-bottom:12px;
-        }
-        .bank-info-box .bank-row{
-            display:flex;
-            justify-content:space-between;
-            padding:8px 0;
-            font-size:14px;
-            font-weight:600;
-        }
-        .bank-info-box .bank-value{color:var(--accent);font-weight:700;}
-        .submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--accent),var(--gold));color:var(--bg-primary);border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;transition:var(--transition);}
-        .submit-btn:hover{background:linear-gradient(135deg,var(--accent-hover),var(--accent));transform:translateY(-2px);}
-        .success-msg{background:rgba(39,174,96,0.08);border:1px solid var(--success);color:var(--success);padding:15px 20px;border-radius:10px;margin-top:20px;display:none;text-align:center;font-weight:600;}
-        .hold-timer{background:rgba(192,57,43,0.06);border:1px solid rgba(192,57,43,0.2);border-radius:12px;padding:25px;text-align:center;margin:20px 0;}
-        .hold-timer .timer-number{font-size:48px;font-weight:800;color:var(--danger);}
-        .hold-timer .timer-label{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;}
-        .progress-bar{background:var(--bg-secondary);border-radius:10px;height:8px;margin-top:15px;overflow:hidden;}
-        .progress-fill{height:100%;background:linear-gradient(90deg,var(--danger),var(--accent));border-radius:10px;transition:width 1s ease;}
-        .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:2000;align-items:center;justify-content:center;}
-        .modal-overlay.active{display:flex;}
-        .modal{background:var(--bg-card);border-radius:var(--radius);padding:40px;width:90%;max-width:500px;max-height:85vh;overflow-y:auto;border:1px solid var(--border);position:relative;}
-        .modal-close{position:absolute;top:15px;right:15px;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;transition:var(--transition);}
-        .modal-close:hover{color:var(--danger);}
-        .modal h2{font-size:24px;color:#fff;margin-bottom:25px;text-align:center;}
-        .modal-link{color:var(--accent);text-decoration:none;font-weight:600;cursor:pointer;}
-        .modal-link:hover{text-decoration:underline;}
-        footer{background:var(--bg-secondary);border-top:1px solid var(--border);padding:60px 25px 30px;position:relative;z-index:1;}
-        .footer-grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;}
-        .footer-col h4{font-size:17px;color:#fff;margin-bottom:20px;}
-        .footer-col p,.footer-col a{color:var(--text-muted);text-decoration:none;line-height:2.2;font-size:13px;display:block;transition:var(--transition);}
-        .footer-col a:hover{color:var(--accent);}
-        .footer-bottom{max-width:1300px;margin:40px auto 0;padding-top:25px;border-top:1px solid var(--border);text-align:center;color:var(--text-muted);font-size:12px;}
-        .admin-tabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:25px;border-bottom:1px solid var(--border);padding-bottom:15px;}
-        .admin-tab{padding:10px 20px;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600;color:var(--text-muted);background:transparent;border:1px solid transparent;transition:var(--transition);}
-        .admin-tab.active{background:var(--accent);color:var(--bg-primary);border-color:var(--accent);}
-        .admin-tab:hover:not(.active){color:#fff;border-color:var(--border);}
-        .admin-content{display:none;}
-        .admin-content.active{display:block;}
-        .admin-action-btn{padding:8px 16px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:700;border:none;transition:var(--transition);margin:2px;}
-        .btn-approve{background:var(--success);color:#fff;}.btn-approve:hover{opacity:0.85;}
-        .btn-reject{background:var(--danger);color:#fff;}.btn-reject:hover{opacity:0.85;}
-        .admin-list-item{background:var(--bg-secondary);padding:14px;margin:6px 0;border-radius:10px;border:1px solid transparent;transition:var(--transition);}
-        .admin-list-item:hover{border-color:var(--border);}
-        @media(max-width:768px){.nav-links{display:none;}.mobile-menu-btn{display:block;}.hero{padding:120px 15px 60px;}.hero-stats{gap:15px;}.stat{padding:15px 20px;}.stat-number{font-size:24px;}.dash-balance{font-size:28px;}.form-card{padding:25px;}.pay-now-btn{padding:14px 30px;font-size:15px;}}
-    </style>
+/* ── NAV ── */
+nav{
+    position:fixed;top:0;width:100%;z-index:1000;
+    padding:0;
+    background:rgba(3,6,15,0.92);
+    backdrop-filter:blur(24px);
+    border-bottom:1px solid var(--border);
+}
+.nav-inner{
+    max-width:1280px;margin:0 auto;
+    display:flex;align-items:stretch;
+    height:64px;padding:0 24px;gap:0;
+}
+.nav-logo{
+    display:flex;align-items:center;gap:10px;
+    text-decoration:none;margin-right:36px;flex-shrink:0;
+}
+.logo-mark{
+    width:34px;height:34px;
+    background:linear-gradient(135deg,var(--gold),var(--gold3));
+    border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Syne',sans-serif;font-weight:800;
+    font-size:15px;color:var(--bg);letter-spacing:-0.5px;
+}
+.logo-name{
+    font-family:'Syne',sans-serif;font-weight:700;
+    font-size:17px;color:#fff;letter-spacing:-0.3px;
+}
+.logo-name span{color:var(--gold);}
+.nav-links{
+    display:flex;align-items:stretch;list-style:none;gap:0;flex:1;
+}
+.nav-links > li{
+    position:relative;display:flex;align-items:stretch;
+}
+.nav-links > li > a{
+    display:flex;align-items:center;gap:5px;
+    padding:0 16px;
+    color:var(--muted);text-decoration:none;
+    font-size:13.5px;font-weight:500;
+    transition:color 0.2s;white-space:nowrap;
+    border-bottom:2px solid transparent;
+}
+.nav-links > li > a:hover,.nav-links > li > a.active{
+    color:#fff;border-bottom-color:var(--gold);
+}
+.nav-links > li > a .chevron{font-size:9px;opacity:0.5;transition:transform 0.2s;}
+.nav-links > li:hover > a .chevron{transform:rotate(180deg);}
+/* Dropdown */
+.dropdown{
+    position:absolute;top:100%;left:0;
+    background:var(--card);border:1px solid var(--border);
+    border-radius:var(--r);padding:8px;
+    min-width:220px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+    opacity:0;pointer-events:none;transform:translateY(-6px);
+    transition:all 0.2s;z-index:200;
+}
+.nav-links > li:hover .dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.dropdown a{
+    display:block;padding:9px 14px;
+    color:var(--muted);text-decoration:none;
+    font-size:13px;border-radius:8px;
+    transition:all 0.15s;
+}
+.dropdown a:hover{background:var(--card2);color:#fff;}
+.nav-actions{display:flex;align-items:center;gap:10px;margin-left:auto;flex-shrink:0;}
+.btn-ghost{
+    padding:8px 18px;border:1px solid var(--border2);
+    color:var(--gold);background:transparent;
+    border-radius:50px;cursor:pointer;
+    font-size:13px;font-weight:600;
+    transition:all 0.2s;text-decoration:none;
+    font-family:'DM Sans',sans-serif;
+}
+.btn-ghost:hover{background:rgba(200,168,75,0.08);}
+.btn-cta{
+    padding:8px 20px;
+    background:var(--gold);color:var(--bg);
+    border:none;border-radius:50px;cursor:pointer;
+    font-size:13px;font-weight:700;
+    transition:all 0.2s;text-decoration:none;
+    font-family:'DM Sans',sans-serif;
+}
+.btn-cta:hover{background:var(--gold2);transform:translateY(-1px);}
+.mobile-btn{display:none;background:none;border:none;color:#fff;font-size:22px;cursor:pointer;}
+
+/* ── LIVE BAR ── */
+.live-bar{
+    background:var(--bg2);
+    border-bottom:1px solid var(--border);
+    padding:10px 0;overflow:hidden;position:relative;z-index:1;
+    margin-top:64px;
+}
+.live-bar-track{
+    display:flex;gap:60px;
+    animation:scroll-left 35s linear infinite;
+    white-space:nowrap;width:max-content;
+}
+.live-item{
+    display:flex;align-items:center;gap:8px;
+    font-size:12.5px;font-weight:600;color:var(--muted);
+}
+.live-item .sym{color:#fff;font-weight:700;}
+.live-item .up{color:var(--green);}
+.live-item .dn{color:var(--red);}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
+@keyframes scroll-left{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;};}
+
+/* ── HERO ── */
+.hero{
+    position:relative;z-index:1;
+    padding:100px 24px 80px;
+    max-width:1280px;margin:0 auto;
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:60px;align-items:center;
+    min-height:calc(100vh - 100px);
+}
+.hero-left{}
+.hero-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(200,168,75,0.07);
+    border:1px solid rgba(200,168,75,0.2);
+    padding:7px 16px;border-radius:50px;
+    font-size:12px;font-weight:600;color:var(--gold);
+    margin-bottom:28px;letter-spacing:0.5px;
+    animation:fadeUp 0.6s ease both;
+}
+.hero h1{
+    font-family:'Syne',sans-serif;
+    font-size:clamp(42px,5.5vw,70px);
+    font-weight:800;line-height:1.05;
+    letter-spacing:-2px;
+    margin-bottom:24px;
+    animation:fadeUp 0.6s ease 0.1s both;
+}
+.hero h1 .line1{display:block;color:#fff;}
+.hero h1 .line2{
+    display:block;
+    background:linear-gradient(90deg,var(--gold),var(--gold3));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{
+    font-size:17px;color:var(--muted);
+    max-width:480px;line-height:1.7;
+    margin-bottom:40px;
+    animation:fadeUp 0.6s ease 0.2s both;
+}
+.hero-btns{
+    display:flex;gap:14px;flex-wrap:wrap;
+    animation:fadeUp 0.6s ease 0.3s both;
+    margin-bottom:56px;
+}
+.btn-hero-primary{
+    padding:16px 36px;
+    background:var(--gold);color:var(--bg);
+    border:none;border-radius:50px;
+    font-size:15px;font-weight:700;
+    cursor:pointer;transition:all 0.25s;
+    text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+    font-family:'DM Sans',sans-serif;
+}
+.btn-hero-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 30px rgba(200,168,75,0.3);}
+.btn-hero-outline{
+    padding:16px 36px;
+    background:transparent;color:#fff;
+    border:1.5px solid rgba(255,255,255,0.15);
+    border-radius:50px;font-size:15px;font-weight:600;
+    cursor:pointer;transition:all 0.25s;
+    text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+    font-family:'DM Sans',sans-serif;
+}
+.btn-hero-outline:hover{border-color:var(--gold);color:var(--gold);}
+.hero-stats{
+    display:flex;gap:36px;flex-wrap:wrap;
+    animation:fadeUp 0.6s ease 0.4s both;
+}
+.hstat{border-left:2px solid var(--gold);padding-left:16px;}
+.hstat-num{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#fff;}
+.hstat-label{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:2px;}
+
+/* Hero right - visual panel */
+.hero-right{
+    animation:fadeUp 0.6s ease 0.3s both;
+    position:relative;
+}
+.hero-panel{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:28px;
+    position:relative;overflow:hidden;
+}
+.hero-panel::before{
+    content:'';position:absolute;top:-60px;right:-60px;
+    width:220px;height:220px;
+    background:radial-gradient(circle,rgba(200,168,75,0.12) 0%,transparent 70%);
+    pointer-events:none;
+}
+.panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;}
+.panel-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;}
+.panel-live{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--green);}
+.panel-live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
+.market-row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:12px 14px;border-radius:10px;
+    transition:background 0.15s;cursor:default;margin-bottom:6px;
+}
+.market-row:hover{background:var(--card2);}
+.market-pair{display:flex;align-items:center;gap:10px;}
+.market-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.market-name{font-weight:700;font-size:14px;color:#fff;}
+.market-sub{font-size:11px;color:var(--muted);}
+.market-right{text-align:right;}
+.market-price{font-weight:700;font-size:14px;color:#fff;}
+.market-change{font-size:11.5px;font-weight:600;margin-top:1px;}
+.up{color:var(--green);}.dn{color:var(--red);}
+.panel-footer{
+    margin-top:18px;padding-top:18px;
+    border-top:1px solid var(--border);
+    display:flex;justify-content:space-between;align-items:center;
+}
+.pf-item{text-align:center;}
+.pf-num{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--gold);}
+.pf-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:2px;}
+.floating-badge{
+    position:absolute;bottom:-16px;left:24px;
+    background:var(--green);color:#fff;
+    padding:8px 16px;border-radius:50px;
+    font-size:12px;font-weight:700;
+    box-shadow:0 8px 20px rgba(34,197,94,0.3);
+    display:flex;align-items:center;gap:6px;
+}
+
+/* ── SECTIONS ── */
+section{position:relative;z-index:1;}
+.section-inner{max-width:1280px;margin:0 auto;padding:0 24px;}
+.sec-header{text-align:center;margin-bottom:60px;}
+.sec-label{
+    display:inline-block;
+    font-size:11px;font-weight:700;letter-spacing:2.5px;
+    text-transform:uppercase;color:var(--gold);
+    margin-bottom:14px;
+}
+.sec-header h2{
+    font-family:'Syne',sans-serif;
+    font-size:clamp(28px,4vw,44px);
+    font-weight:800;letter-spacing:-1.5px;color:#fff;
+    margin-bottom:14px;
+}
+.sec-header p{color:var(--muted);font-size:16px;max-width:520px;margin:0 auto;}
+
+/* ── TRUST BAR ── */
+.trust-bar{
+    padding:36px 0;
+    background:var(--bg2);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+.trust-inner{
+    max-width:1280px;margin:0 auto;padding:0 24px;
+    display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:24px;
+}
+.trust-item{
+    display:flex;align-items:center;gap:12px;
+}
+.trust-icon{font-size:24px;}
+.trust-text strong{display:block;font-size:15px;font-weight:700;color:#fff;}
+.trust-text span{font-size:12px;color:var(--muted);}
+
+/* ── STEPS ── */
+.steps-section{padding:100px 0;}
+.steps-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:2px;background:var(--border);
+    border:1px solid var(--border);border-radius:20px;overflow:hidden;
+}
+.step-card{
+    background:var(--bg);padding:44px 36px;
+    position:relative;
+}
+.step-num{
+    font-family:'Syne',sans-serif;
+    font-size:64px;font-weight:800;
+    color:rgba(200,168,75,0.06);
+    line-height:1;margin-bottom:20px;
+    letter-spacing:-3px;
+}
+.step-icon{font-size:32px;margin-bottom:16px;display:block;}
+.step-card h3{
+    font-family:'Syne',sans-serif;
+    font-size:20px;font-weight:700;color:#fff;
+    margin-bottom:10px;
+}
+.step-card p{color:var(--muted);font-size:14px;line-height:1.7;}
+.step-arrow{
+    position:absolute;top:50%;right:-1px;transform:translateY(-50%);
+    width:2px;height:40px;background:var(--gold);opacity:0.4;
+}
+
+/* ── FEATURES / WHY US ── */
+.features-section{padding:100px 0;background:var(--bg2);}
+.features-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;
+    background:var(--border);border:1px solid var(--border);border-radius:20px;overflow:hidden;
+}
+.feat-card{
+    background:var(--bg2);padding:36px 30px;
+    transition:background 0.2s;
+}
+.feat-card:hover{background:var(--card);}
+.feat-icon-wrap{
+    width:52px;height:52px;
+    background:rgba(200,168,75,0.07);
+    border:1px solid rgba(200,168,75,0.15);
+    border-radius:14px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:24px;margin-bottom:18px;
+}
+.feat-card h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:#fff;margin-bottom:8px;}
+.feat-card p{color:var(--muted);font-size:13.5px;line-height:1.7;}
+
+/* ── MARKETS ── */
+.markets-section{padding:100px 0;}
+.markets-tabs{
+    display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;
+}
+.mktab{
+    padding:9px 22px;border-radius:50px;cursor:pointer;
+    font-size:13px;font-weight:600;
+    background:transparent;color:var(--muted);
+    border:1px solid var(--border);
+    transition:all 0.2s;font-family:'DM Sans',sans-serif;
+}
+.mktab.active,.mktab:hover{background:var(--gold);color:var(--bg);border-color:var(--gold);}
+.markets-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;
+}
+.mkt-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:16px;padding:24px 20px;
+    transition:all 0.2s;cursor:default;
+}
+.mkt-card:hover{border-color:var(--border2);transform:translateY(-3px);}
+.mkt-card-icon{font-size:28px;margin-bottom:12px;}
+.mkt-card h4{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-bottom:4px;}
+.mkt-card p{font-size:12px;color:var(--muted);}
+.mkt-card .mkt-badge{
+    display:inline-block;margin-top:12px;
+    padding:3px 10px;border-radius:50px;
+    font-size:10.5px;font-weight:700;
+    background:rgba(34,197,94,0.1);color:var(--green);
+}
+
+/* ── DASHBOARD SECTION ── */
+.dashboard-section{padding:100px 0;background:var(--bg2);}
+.dashboard-wrap{
+    display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;
+}
+.dashboard-info h2{
+    font-family:'Syne',sans-serif;
+    font-size:clamp(28px,3.5vw,40px);
+    font-weight:800;letter-spacing:-1.5px;
+    color:#fff;margin-bottom:16px;
+}
+.dashboard-info p{color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:28px;}
+.dash-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.dash-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:16px;padding:22px;
+    transition:border-color 0.2s;
+}
+.dash-card:hover{border-color:var(--border2);}
+.dash-card-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;}
+.dash-card-value{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#fff;}
+.dash-card-sub{font-size:12px;margin-top:4px;}
+.dash-card-full{grid-column:1/-1;}
+.table-wrap{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:14px;}
+table{width:100%;border-collapse:collapse;}
+th{
+    text-align:left;padding:14px 18px;
+    font-size:10.5px;text-transform:uppercase;
+    letter-spacing:2px;color:var(--muted);
+    border-bottom:1px solid var(--border);
+    font-weight:600;
+}
+td{padding:14px 18px;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,0.02);}
+.status-badge{padding:4px 12px;border-radius:50px;font-size:10.5px;font-weight:700;letter-spacing:0.5px;}
+.status-pending{background:rgba(200,168,75,0.1);color:var(--gold);}
+.status-completed{background:rgba(34,197,94,0.1);color:var(--green);}
+.status-hold{background:rgba(239,68,68,0.1);color:var(--red);}
+
+/* ── DEPOSIT SECTION ── */
+.deposit-section{padding:100px 0;}
+.deposit-wrap{
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;
+}
+.deposit-info h2{
+    font-family:'Syne',sans-serif;
+    font-size:clamp(28px,3.5vw,40px);
+    font-weight:800;letter-spacing:-1.5px;
+    color:#fff;margin-bottom:16px;
+}
+.deposit-info p{color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:32px;}
+.deposit-perks{display:flex;flex-direction:column;gap:14px;}
+.perk{display:flex;align-items:center;gap:14px;}
+.perk-icon{
+    width:40px;height:40px;flex-shrink:0;
+    background:rgba(200,168,75,0.07);
+    border:1px solid rgba(200,168,75,0.15);
+    border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;
+}
+.perk-text strong{display:block;font-size:14px;color:#fff;font-weight:600;}
+.perk-text span{font-size:12.5px;color:var(--muted);}
+.deposit-form{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:20px;padding:32px;
+}
+.deposit-form h3{
+    font-family:'Syne',sans-serif;font-size:20px;
+    font-weight:700;color:#fff;margin-bottom:24px;
+}
+/* Payment box */
+.pay-box{
+    background:rgba(245,166,35,0.05);
+    border:1.5px solid var(--flw);
+    border-radius:14px;padding:28px;
+    text-align:center;margin-bottom:22px;
+}
+.pay-box .card-icons{font-size:24px;display:flex;justify-content:center;gap:8px;margin-bottom:8px;}
+.pay-box .pay-provider{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;}
+.pay-box .pay-name{font-size:20px;font-weight:700;color:#fff;margin-bottom:20px;}
+.pay-now-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:15px 40px;
+    background:linear-gradient(135deg,var(--flw),#f7b731);
+    color:#000;border-radius:12px;
+    text-decoration:none;font-weight:700;font-size:15px;
+    transition:all 0.25s;
+    box-shadow:0 6px 20px rgba(245,166,35,0.25);
+}
+.pay-now-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(245,166,35,0.4);}
+.pay-secure{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    margin-top:10px;font-size:11.5px;color:var(--muted);
+}
+.pay-secure .lock{color:var(--green);}
+
+/* ── WITHDRAW SECTION ── */
+.withdraw-section{padding:100px 0;background:var(--bg2);}
+
+/* ── VERIFY SECTION ── */
+.verify-section{padding:100px 0;}
+
+/* ── FORMS ── */
+.form-group{margin-bottom:18px;}
+.form-group label{
+    display:block;margin-bottom:6px;
+    font-size:11px;font-weight:700;
+    color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;
+}
+.form-group input,.form-group select,.form-group textarea{
+    width:100%;padding:13px 16px;
+    background:var(--bg3);
+    border:1px solid var(--border);
+    border-radius:10px;color:#fff;
+    font-size:14px;font-family:'DM Sans',sans-serif;
+    transition:all 0.2s;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+    outline:none;border-color:var(--gold);
+    box-shadow:0 0 0 3px rgba(200,168,75,0.08);
+}
+.form-group select option{background:var(--card);color:#fff;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.submit-btn{
+    width:100%;padding:15px;
+    background:linear-gradient(135deg,var(--gold),var(--gold2));
+    color:var(--bg);border:none;border-radius:12px;
+    font-size:15px;font-weight:700;cursor:pointer;
+    transition:all 0.25s;font-family:'DM Sans',sans-serif;
+    letter-spacing:0.3px;
+}
+.submit-btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(200,168,75,0.3);}
+.success-msg{
+    background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.25);
+    color:var(--green);padding:13px 18px;border-radius:10px;
+    margin-top:16px;display:none;text-align:center;font-weight:600;font-size:14px;
+}
+/* Upload */
+.upload-area{
+    border:2px dashed var(--border);border-radius:12px;
+    padding:24px;text-align:center;cursor:pointer;
+    transition:all 0.2s;background:var(--bg3);margin:16px 0;
+}
+.upload-area:hover{border-color:var(--gold);background:rgba(200,168,75,0.02);}
+.upload-area input{display:none;}
+.upload-icon{font-size:28px;margin-bottom:6px;}
+.upload-label{font-size:13px;color:var(--muted);}
+.upload-name{font-size:11.5px;color:var(--green);margin-top:4px;}
+
+/* Hold timer */
+.hold-timer{
+    background:rgba(239,68,68,0.05);
+    border:1px solid rgba(239,68,68,0.18);
+    border-radius:12px;padding:22px;
+    text-align:center;margin:16px 0;
+}
+.timer-label{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;}
+.timer-number{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;color:var(--red);}
+.progress-bar{background:var(--bg3);border-radius:10px;height:6px;margin-top:12px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:10px;transition:width 1s ease;}
+
+/* ── FAQ ── */
+.faq-section{padding:100px 0;background:var(--bg2);}
+.faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:2px;}
+.faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:6px;}
+.faq-q{
+    width:100%;background:none;border:none;color:#fff;
+    padding:20px 24px;display:flex;justify-content:space-between;align-items:center;
+    cursor:pointer;font-size:15px;font-weight:600;text-align:left;
+    font-family:'DM Sans',sans-serif;transition:background 0.15s;
+}
+.faq-q:hover{background:var(--card);}
+.faq-q .arrow{font-size:12px;color:var(--gold);transition:transform 0.25s;flex-shrink:0;margin-left:12px;}
+.faq-q.open .arrow{transform:rotate(180deg);}
+.faq-a{
+    max-height:0;overflow:hidden;
+    transition:max-height 0.3s ease;
+    font-size:14px;color:var(--muted);line-height:1.8;
+}
+.faq-a.open{max-height:200px;}
+.faq-a-inner{padding:0 24px 20px;}
+
+/* ── FOOTER CTA ── */
+.footer-cta{
+    padding:80px 24px;
+    background:linear-gradient(135deg,rgba(200,168,75,0.06) 0%,transparent 60%);
+    border-top:1px solid var(--border);
+    text-align:center;position:relative;z-index:1;
+}
+.footer-cta h2{
+    font-family:'Syne',sans-serif;
+    font-size:clamp(30px,4vw,50px);
+    font-weight:800;letter-spacing:-1.5px;color:#fff;
+    margin-bottom:14px;
+}
+.footer-cta p{color:var(--muted);font-size:16px;margin-bottom:36px;}
+.footer-cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* ── FOOTER ── */
+footer{
+    background:var(--bg);
+    border-top:1px solid var(--border);
+    padding:60px 24px 30px;
+    position:relative;z-index:1;
+}
+.footer-grid{
+    max-width:1280px;margin:0 auto;
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;
+    margin-bottom:48px;
+}
+.footer-brand .logo-wrap{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.footer-brand p{color:var(--muted);font-size:13.5px;line-height:1.8;max-width:280px;}
+.footer-col h5{
+    font-family:'Syne',sans-serif;
+    font-size:13px;font-weight:700;color:#fff;
+    letter-spacing:1px;text-transform:uppercase;
+    margin-bottom:16px;
+}
+.footer-col a{
+    display:block;color:var(--muted);text-decoration:none;
+    font-size:13.5px;line-height:2.2;transition:color 0.15s;
+}
+.footer-col a:hover{color:var(--gold);}
+.footer-bottom{
+    max-width:1280px;margin:0 auto;
+    padding-top:24px;border-top:1px solid var(--border);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+.footer-bottom p{font-size:12px;color:var(--muted);}
+.footer-bottom a{color:var(--muted);text-decoration:none;font-size:12px;}
+.footer-bottom a:hover{color:var(--gold);}
+.admin-link{color:var(--muted) !important;cursor:pointer;}
+
+/* ── MODALS ── */
+.modal-overlay{
+    display:none;position:fixed;inset:0;
+    background:rgba(0,0,0,0.88);z-index:2000;
+    align-items:center;justify-content:center;
+    padding:20px;
+}
+.modal-overlay.active{display:flex;}
+.modal{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;padding:36px;
+    width:100%;max-width:480px;
+    max-height:90vh;overflow-y:auto;
+    position:relative;
+}
+.modal-wide{max-width:720px;}
+.modal-close{
+    position:absolute;top:14px;right:14px;
+    background:rgba(255,255,255,0.05);
+    border:none;color:var(--muted);
+    width:32px;height:32px;border-radius:50%;
+    font-size:16px;cursor:pointer;
+    transition:all 0.2s;display:flex;align-items:center;justify-content:center;
+}
+.modal-close:hover{background:rgba(239,68,68,0.15);color:var(--red);}
+.modal h2{
+    font-family:'Syne',sans-serif;
+    font-size:22px;font-weight:800;color:#fff;
+    margin-bottom:24px;letter-spacing:-0.5px;
+}
+.modal-link{color:var(--gold);text-decoration:none;font-weight:600;cursor:pointer;}
+.modal-link:hover{text-decoration:underline;}
+
+/* Admin tabs */
+.admin-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:24px;border-bottom:1px solid var(--border);padding-bottom:12px;}
+.admin-tab{
+    padding:8px 16px;border-radius:8px;cursor:pointer;
+    font-size:12px;font-weight:600;color:var(--muted);
+    background:transparent;border:1px solid transparent;
+    transition:all 0.15s;font-family:'DM Sans',sans-serif;
+}
+.admin-tab.active{background:var(--gold);color:var(--bg);border-color:var(--gold);}
+.admin-tab:hover:not(.active){color:#fff;border-color:var(--border);}
+.admin-content{display:none;}
+.admin-content.active{display:block;}
+.admin-list-item{
+    background:var(--bg3);padding:12px 14px;
+    margin:5px 0;border-radius:10px;
+    border:1px solid transparent;transition:border-color 0.15s;
+    font-size:13px;
+}
+.admin-list-item:hover{border-color:var(--border);}
+.admin-action-btn{
+    padding:6px 14px;border-radius:6px;cursor:pointer;
+    font-size:11px;font-weight:700;border:none;
+    transition:opacity 0.15s;margin:2px;font-family:'DM Sans',sans-serif;
+}
+.btn-approve{background:var(--green);color:#fff;}
+.btn-approve:hover{opacity:0.8;}
+.btn-reject{background:var(--red);color:#fff;}
+.btn-reject:hover{opacity:0.8;}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-16px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+    .hero{grid-template-columns:1fr;min-height:auto;padding-top:80px;}
+    .hero-right{display:none;}
+    .dashboard-wrap,.deposit-wrap{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .steps-grid{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+    .nav-links{display:none;}
+    .mobile-btn{display:block;}
+    .hero h1{letter-spacing:-1px;}
+    .hero-stats{gap:20px;}
+    .dash-grid{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .footer-bottom{flex-direction:column;text-align:center;}
+    .trust-inner{flex-direction:column;gap:20px;}
+    .features-grid{grid-template-columns:1fr;}
+    .markets-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:480px){
+    .markets-grid{grid-template-columns:1fr;}
+    .modal{padding:24px;}
+}
+
+/* Mobile nav drawer */
+.mobile-nav-drawer{
+    display:none;position:fixed;top:64px;left:0;width:100%;
+    background:rgba(3,6,15,0.98);backdrop-filter:blur(20px);
+    z-index:999;padding:20px 24px;border-bottom:1px solid var(--border);
+}
+.mobile-nav-drawer.open{display:block;}
+.mobile-nav-drawer a{
+    display:block;padding:12px 0;color:var(--muted);text-decoration:none;
+    font-size:15px;border-bottom:1px solid var(--border);transition:color 0.15s;
+}
+.mobile-nav-drawer a:hover{color:var(--gold);}
+.mobile-nav-drawer .m-btns{display:flex;gap:10px;margin-top:16px;}
+.mobile-nav-drawer .m-btns a{border:none;padding:0;}
+</style>
 </head>
 <body>
 
-<div class="bg-particles"></div>
-
-<!-- Navigation -->
+<!-- NAV -->
 <nav>
-    <div class="nav-container">
-        <a href="#" class="logo"><div class="logo-icon">M</div>Merdinia<span style="color:var(--accent);">Capital</span></a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#dashboard">Dashboard</a></li>
-            <li><a href="#deposit">Deposit</a></li>
-            <li><a href="#withdraw">Withdraw</a></li>
-            <li><a href="#verify">Verify ID</a></li>
+    <div class="nav-inner">
+        <a href="#" class="nav-logo">
+            <div class="logo-mark">MC</div>
+            <span class="logo-name">Merdinia<span>Capital</span></span>
+        </a>
+        <ul class="nav-links">
+            <li>
+                <a href="#markets">Markets <span class="chevron">▾</span></a>
+                <div class="dropdown">
+                    <a href="#markets">Forex</a>
+                    <a href="#markets">Cryptocurrencies</a>
+                    <a href="#markets">Gold & Metals</a>
+                    <a href="#markets">Indices</a>
+                    <a href="#markets">Commodities</a>
+                </div>
+            </li>
+            <li>
+                <a href="#dashboard">Accounts <span class="chevron">▾</span></a>
+                <div class="dropdown">
+                    <a href="#dashboard">My Dashboard</a>
+                    <a href="#deposit">Deposit Funds</a>
+                    <a href="#withdraw">Withdraw</a>
+                    <a href="#verify">Verify ID</a>
+                </div>
+            </li>
+            <li><a href="#features">Why Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
         </ul>
-        <div class="nav-btns">
-            <a href="#" class="btn-outline" onclick="openModal('loginModal')">Log In</a>
-            <a href="#" class="btn-primary" onclick="openModal('signupModal')">Sign Up</a>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        <div class="nav-actions">
+            <a href="javascript:void(0)" class="btn-ghost" onclick="openModal('loginModal')">Log In</a>
+            <a href="javascript:void(0)" class="btn-cta" onclick="openModal('signupModal')">Open Account</a>
+            <button class="mobile-btn" onclick="toggleMobileNav()">☰</button>
         </div>
     </div>
 </nav>
 
-<!-- Hero -->
-<header class="hero" id="home">
-    <div class="hero-badge">✦ Trusted Global Broker Platform</div>
-    <h1>Global Trade.<br>Smart Capital.</h1>
-    <p class="hero-subtitle">Merdinia Capital — Your gateway to professional Forex & Crypto trading. Deposit, get verified, and let our expert traders grow your portfolio.</p>
-    <div class="hero-stats">
-        <div class="stat"><div class="stat-number">$4.8M+</div><div class="stat-label">Assets Managed</div></div>
-        <div class="stat"><div class="stat-number">3,200+</div><div class="stat-label">Global Investors</div></div>
-        <div class="stat"><div class="stat-number">99.2%</div><div class="stat-label">Client Retention</div></div>
-    </div>
-    <div class="hero-cta-group">
-        <a href="#" class="btn-lg btn-lg-primary" onclick="openModal('signupModal')">Start Investing →</a>
-        <a href="#features" class="btn-lg btn-lg-outline">Discover More ↓</a>
-    </div>
-</header>
-
-<!-- Ticker -->
-<div class="ticker-bar">
-    <div class="ticker-content">
-        <div class="ticker-item">BTC/USD <span class="ticker-up">$68,150 ▲3.1%</span></div>
-        <div class="ticker-item">ETH/USD <span class="ticker-down">$3,512 ▼0.6%</span></div>
-        <div class="ticker-item">XAU/USD <span class="ticker-up">$2,378 ▲1.4%</span></div>
-        <div class="ticker-item">EUR/USD <span class="ticker-up">1.0924 ▲0.4%</span></div>
-        <div class="ticker-item">USDT/NGN <span class="ticker-up">₦1,562 ▲0.8%</span></div>
-        <div class="ticker-item">BTC/USD <span class="ticker-up">$68,150 ▲3.1%</span></div>
-        <div class="ticker-item">ETH/USD <span class="ticker-down">$3,512 ▼0.6%</span></div>
-        <div class="ticker-item">XAU/USD <span class="ticker-up">$2,378 ▲1.4%</span></div>
-        <div class="ticker-item">EUR/USD <span class="ticker-up">1.0924 ▲0.4%</span></div>
-        <div class="ticker-item">USDT/NGN <span class="ticker-up">₦1,562 ▲0.8%</span></div>
+<!-- Mobile Nav -->
+<div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="#markets" onclick="toggleMobileNav()">Markets</a>
+    <a href="#dashboard" onclick="toggleMobileNav()">Dashboard</a>
+    <a href="#deposit" onclick="toggleMobileNav()">Deposit</a>
+    <a href="#withdraw" onclick="toggleMobileNav()">Withdraw</a>
+    <a href="#verify" onclick="toggleMobileNav()">Verify ID</a>
+    <a href="#features" onclick="toggleMobileNav()">Why Us</a>
+    <a href="#faq" onclick="toggleMobileNav()">FAQ</a>
+    <div class="m-btns">
+        <a href="javascript:void(0)" class="btn-ghost" onclick="openModal('loginModal');toggleMobileNav()">Log In</a>
+        <a href="javascript:void(0)" class="btn-cta" onclick="openModal('signupModal');toggleMobileNav()">Open Account</a>
     </div>
 </div>
 
-<!-- Features -->
-<section id="features">
-    <div class="section-header">
-        <h2>Why <span class="accent-text">Merdinia Capital</span></h2>
-        <p>Built for the modern global investor. Secure, transparent, and profitable.</p>
+<!-- LIVE TICKER -->
+<div class="live-bar">
+    <div class="live-bar-track">
+        <div class="live-item"><span class="live-dot"></span><span class="sym">BTC/USD</span> <span class="up">$68,150 ▲3.1%</span></div>
+        <div class="live-item"><span class="sym">ETH/USD</span> <span class="dn">$3,512 ▼0.6%</span></div>
+        <div class="live-item"><span class="sym">XAU/USD</span> <span class="up">$2,378 ▲1.4%</span></div>
+        <div class="live-item"><span class="sym">EUR/USD</span> <span class="up">1.0924 ▲0.4%</span></div>
+        <div class="live-item"><span class="sym">GBP/USD</span> <span class="dn">1.2741 ▼0.2%</span></div>
+        <div class="live-item"><span class="sym">USD/JPY</span> <span class="up">149.82 ▲0.5%</span></div>
+        <div class="live-item"><span class="sym">SOL/USD</span> <span class="up">$178.40 ▲5.2%</span></div>
+        <div class="live-item"><span class="sym">XRP/USD</span> <span class="dn">$0.6124 ▼1.1%</span></div>
+        <div class="live-item"><span class="sym">OIL/USD</span> <span class="up">$84.20 ▲0.8%</span></div>
+        <div class="live-item"><span class="sym">SPX500</span> <span class="up">5,248 ▲0.6%</span></div>
+        <!-- duplicate for seamless loop -->
+        <div class="live-item"><span class="live-dot"></span><span class="sym">BTC/USD</span> <span class="up">$68,150 ▲3.1%</span></div>
+        <div class="live-item"><span class="sym">ETH/USD</span> <span class="dn">$3,512 ▼0.6%</span></div>
+        <div class="live-item"><span class="sym">XAU/USD</span> <span class="up">$2,378 ▲1.4%</span></div>
+        <div class="live-item"><span class="sym">EUR/USD</span> <span class="up">1.0924 ▲0.4%</span></div>
+        <div class="live-item"><span class="sym">GBP/USD</span> <span class="dn">1.2741 ▼0.2%</span></div>
+        <div class="live-item"><span class="sym">USD/JPY</span> <span class="up">149.82 ▲0.5%</span></div>
+        <div class="live-item"><span class="sym">SOL/USD</span> <span class="up">$178.40 ▲5.2%</span></div>
+        <div class="live-item"><span class="sym">XRP/USD</span> <span class="dn">$0.6124 ▼1.1%</span></div>
+        <div class="live-item"><span class="sym">OIL/USD</span> <span class="up">$84.20 ▲0.8%</span></div>
+        <div class="live-item"><span class="sym">SPX500</span> <span class="up">5,248 ▲0.6%</span></div>
     </div>
-    <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">🛡️</div><h3>Verified & Secure</h3><p>Strict ID & Face verification protects every account.</p></div>
-        <div class="feature-card"><div class="feature-icon">📊</div><h3>Expert Management</h3><p>Professional traders manage funds on proven platforms.</p></div>
-        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Fast Payouts</h3><p>48-hour verification hold, then quick withdrawal.</p></div>
-        <div class="feature-card"><div class="feature-icon">🌍</div><h3>Global Access</h3><p>Open to investors worldwide with multiple currencies.</p></div>
-        <div class="feature-card"><div class="feature-icon">📱</div><h3>Live Tracking</h3><p>Monitor your portfolio in real-time from any device.</p></div>
-        <div class="feature-card"><div class="feature-icon">💬</div><h3>Direct Support</h3><p>Contact our team directly whenever you need help.</p></div>
-    </div>
-</section>
+</div>
 
-<!-- How It Works -->
-<section>
-    <div class="section-header"><h2>How It Works</h2><p>Get started in 4 simple steps</p></div>
-    <div class="steps-grid">
-        <div class="step-card"><h3>Register</h3><p>Create your account with basic details and country.</p></div>
-        <div class="step-card"><h3>Verify Identity</h3><p>Upload ID card & Face ID for 48-hour review.</p></div>
-        <div class="step-card"><h3>Deposit Funds</h3><p>Fund your account securely via Flutterwave.</p></div>
-        <div class="step-card"><h3>Earn & Withdraw</h3><p>We trade for you. Request withdrawals anytime.</p></div>
-    </div>
-</section>
-
-<!-- Dashboard -->
-<section id="dashboard">
-    <div class="section-header"><h2>📊 Your Dashboard</h2><p>Real-time portfolio overview</p></div>
-    <div class="dashboard-grid">
-        <div class="dash-card"><h3>Total Balance</h3><div class="dash-balance" id="userBalance">$0.00</div><div class="dash-change up" id="userChange">+0.0% this week</div></div>
-        <div class="dash-card"><h3>Active Investments</h3><div class="dash-balance" style="font-size:28px;" id="activeInvestments">0</div><div class="dash-change" style="color:var(--accent);">Running trades</div></div>
-        <div class="dash-card"><h3>Pending Withdrawals</h3><div class="dash-balance" style="font-size:28px;color:var(--gold);" id="pendingWithdrawals">$0.00</div><div class="dash-change" style="color:var(--gold);" id="holdStatus">No pending requests</div></div>
-    </div>
-    <div class="table-container">
-        <table><thead><tr><th>Date</th><th>Type</th><th>Amount</th><th>Status</th></tr></thead>
-        <tbody id="transactionTable"><tr><td colspan="4" style="text-align:center;padding:40px;color:var(--text-muted);">Log in to view transactions.</td></tr></tbody></table>
-    </div>
-</section>
-
-<!-- Deposit -->
-<section id="deposit">
-    <div class="section-header"><h2>💰 Deposit Funds</h2><p>Fund your account securely to start trading</p></div>
-    <div class="form-card">
-        <h3>Make a Deposit</h3>
-        
-        <!-- Flutterwave Payment Button -->
-        <div class="payment-button-box">
-            <div class="payment-label">Secure Payment Via</div>
-            <div class="payment-provider">Flutter<span>wave</span></div>
-            <a href="https://flutterwave.com/pay/mlf7bn34ikyi" target="_blank" class="pay-now-btn">
-                <span class="btn-icon">💳</span> Pay Now via Flutterwave →
-            </a>
-            <div class="secure-badge">
-                <span class="lock">🔒</span> Secured by Flutterwave • All major cards accepted
+<!-- HERO -->
+<header id="home">
+<div class="hero">
+    <div class="hero-left">
+        <div class="hero-badge">🏆 &nbsp;Trusted Global Investment Broker</div>
+        <h1>
+            <span class="line1">Bring Your Trading</span>
+            <span class="line2">Ambition Into Focus.</span>
+        </h1>
+        <p class="hero-sub">Merdinia Capital — Your gateway to professional Forex & Crypto trading. Deposit securely via card and let our expert traders grow your portfolio globally.</p>
+        <div class="hero-btns">
+            <a href="javascript:void(0)" class="btn-hero-primary" onclick="openModal('signupModal')">Open Account →</a>
+            <a href="#features" class="btn-hero-outline">Why Merdinia ↓</a>
+        </div>
+        <div class="hero-stats">
+            <div class="hstat">
+                <div class="hstat-num">$4.8M+</div>
+                <div class="hstat-label">Assets Managed</div>
+            </div>
+            <div class="hstat">
+                <div class="hstat-num">3,200+</div>
+                <div class="hstat-label">Global Investors</div>
+            </div>
+            <div class="hstat">
+                <div class="hstat-num">99.2%</div>
+                <div class="hstat-label">Client Retention</div>
+            </div>
+            <div class="hstat">
+                <div class="hstat-num">$100</div>
+                <div class="hstat-label">Min. Deposit</div>
             </div>
         </div>
+    </div>
+    <div class="hero-right">
+        <div class="hero-panel">
+            <div class="panel-header">
+                <span class="panel-title">Live Markets</span>
+                <span class="panel-live"><span class="panel-live-dot"></span> Live</span>
+            </div>
+            <div class="market-row">
+                <div class="market-pair">
+                    <div class="market-icon" style="background:rgba(247,147,26,0.12);">₿</div>
+                    <div><div class="market-name">BTC/USD</div><div class="market-sub">Bitcoin</div></div>
+                </div>
+                <div class="market-right">
+                    <div class="market-price">$68,150</div>
+                    <div class="market-change up">▲ 3.1%</div>
+                </div>
+            </div>
+            <div class="market-row">
+                <div class="market-pair">
+                    <div class="market-icon" style="background:rgba(98,126,234,0.12);">Ξ</div>
+                    <div><div class="market-name">ETH/USD</div><div class="market-sub">Ethereum</div></div>
+                </div>
+                <div class="market-right">
+                    <div class="market-price">$3,512</div>
+                    <div class="market-change dn">▼ 0.6%</div>
+                </div>
+            </div>
+            <div class="market-row">
+                <div class="market-pair">
+                    <div class="market-icon" style="background:rgba(200,168,75,0.12);">Au</div>
+                    <div><div class="market-name">XAU/USD</div><div class="market-sub">Gold</div></div>
+                </div>
+                <div class="market-right">
+                    <div class="market-price">$2,378</div>
+                    <div class="market-change up">▲ 1.4%</div>
+                </div>
+            </div>
+            <div class="market-row">
+                <div class="market-pair">
+                    <div class="market-icon" style="background:rgba(59,130,246,0.12);">€$</div>
+                    <div><div class="market-name">EUR/USD</div><div class="market-sub">Euro / Dollar</div></div>
+                </div>
+                <div class="market-right">
+                    <div class="market-price">1.0924</div>
+                    <div class="market-change up">▲ 0.4%</div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pf-item"><div class="pf-num">$0</div><div class="pf-label">Commission</div></div>
+                <div class="pf-item"><div class="pf-num">1:500</div><div class="pf-label">Leverage</div></div>
+                <div class="pf-item"><div class="pf-num">0.0</div><div class="pf-label">Min Spread</div></div>
+                <div class="pf-item"><div class="pf-num">24/7</div><div class="pf-label">Support</div></div>
+            </div>
+        </div>
+        <div class="floating-badge">✓ &nbsp;Verified Secure Platform</div>
+    </div>
+</div>
+</header>
 
-        <p style="text-align:center;color:var(--text-muted);font-size:13px;margin:20px 0;">— or enter deposit details below —</p>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+    <div class="trust-inner">
+        <div class="trust-item">
+            <span class="trust-icon">🛡️</span>
+            <div class="trust-text"><strong>Segregated Funds</strong><span>Client funds fully protected</span></div>
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon">⚡</span>
+            <div class="trust-text"><strong>Fast Withdrawals</strong><span>Processed within 48 hours</span></div>
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon">🌍</span>
+            <div class="trust-text"><strong>Global Access</strong><span>50+ countries supported</span></div>
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon">📞</span>
+            <div class="trust-text"><strong>24/7 Support</strong><span>Human team, always available</span></div>
+        </div>
+        <div class="trust-item">
+            <span class="trust-icon">💳</span>
+            <div class="trust-text"><strong>Secure Payments</strong><span>Via Flutterwave card gateway</span></div>
+        </div>
+    </div>
+</div>
 
-        <div class="form-group"><label>Amount ($)</label><input type="number" id="depositAmount" placeholder="e.g., 1000" min="100"></div>
-        <div class="form-group"><label>Payment Method</label><select id="depositMethod"><option value="flutterwave">Flutterwave (Card/Bank)</option><option value="bank">Bank Transfer</option><option value="crypto">Cryptocurrency</option></select></div>
-        
-        <div class="upload-area" onclick="document.getElementById('depositReceipt').click()"><div class="upload-icon-text">📸</div><p class="upload-text-small">Upload Payment Receipt / Screenshot</p><p class="file-name-display" id="depositFileName"></p><input type="file" id="depositReceipt" accept="image/*" onchange="handleFile(event,'depositFileName')"></div>
-        <button class="submit-btn" onclick="submitDeposit()">Submit Deposit Confirmation →</button>
-        <div class="success-msg" id="depositSuccess">✅ Deposit submitted! Admin will verify and update your balance.</div>
+<!-- HOW IT WORKS -->
+<section class="steps-section">
+    <div class="section-inner">
+        <div class="sec-header">
+            <div class="sec-label">Get Started</div>
+            <h2>Start Trading in 3 Easy Steps</h2>
+            <p>From registration to live trading in under 10 minutes.</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <span class="step-icon">👤</span>
+                <h3>Open Your Account</h3>
+                <p>Register in minutes with your name, email and country. No complex paperwork required to get started.</p>
+                <div class="step-arrow"></div>
+            </div>
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <span class="step-icon">💳</span>
+                <h3>Deposit Funds</h3>
+                <p>Deposit securely via Flutterwave card gateway. Minimum $100. Funds are credited to your account upon confirmation.</p>
+                <div class="step-arrow"></div>
+            </div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <span class="step-icon">📈</span>
+                <h3>Start Investing</h3>
+                <p>Our expert traders manage your portfolio across Forex, Crypto, Gold and more. Watch your capital grow.</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Withdraw -->
-<section id="withdraw">
-    <div class="section-header"><h2>💸 Withdraw Funds</h2><p>Request a payout</p></div>
-    <div class="form-card">
-        <h3>Request Withdrawal</h3>
-        <div class="hold-timer" id="holdTimerBox" style="display:none;"><p class="timer-label">⏳ Security Hold</p><div class="timer-number" id="timerDisplay">48:00:00</div><div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%;"></div></div><p style="font-size:11px;color:var(--text-muted);margin-top:8px;">Funds released after 48-hour review</p></div>
-        <div class="form-group"><label>Amount ($)</label><input type="number" id="withdrawAmount" placeholder="Enter amount" min="100"></div>
-        <div class="form-group"><label>Bank Name</label><input type="text" id="withdrawBank" placeholder="Your bank name"></div>
-        <div class="form-group"><label>Account Number</label><input type="text" id="withdrawAccount" placeholder="Your account number"></div>
-        <div class="form-group"><label>Account Holder Name</label><input type="text" id="withdrawAccountName" placeholder="Name on bank account"></div>
-        <div class="upload-area" onclick="document.getElementById('withdrawFace').click()"><div class="upload-icon-text">🤳</div><p class="upload-text-small">Upload Face ID for Confirmation</p><p class="file-name-display" id="withdrawFileName"></p><input type="file" id="withdrawFace" accept="image/*" onchange="handleFile(event,'withdrawFileName')"></div>
-        <button class="submit-btn" onclick="submitWithdrawal()">Request Withdrawal →</button>
-        <div class="success-msg" id="withdrawSuccess">✅ Request submitted! 48-hour hold started.</div>
+<!-- FEATURES -->
+<section class="features-section" id="features">
+    <div class="section-inner">
+        <div class="sec-header">
+            <div class="sec-label">Why Merdinia</div>
+            <h2>Built For Serious Investors</h2>
+            <p>Every feature designed to maximise your returns and protect your capital.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feat-card">
+                <div class="feat-icon-wrap">⚡</div>
+                <h3>Expert-Managed Trading</h3>
+                <p>Our professional traders execute strategies across global markets 24/7 — so you don't have to.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon-wrap">🔒</div>
+                <h3>Secure Card Payments</h3>
+                <p>Deposit instantly via Flutterwave — one of Africa & the world's most trusted payment gateways.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon-wrap">🌍</div>
+                <h3>Global Market Access</h3>
+                <p>Trade Forex pairs, Crypto, Gold, Indices and Commodities — all from a single account.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon-wrap">📊</div>
+                <h3>Real-Time Dashboard</h3>
+                <p>Track your balance, investments, withdrawal status and transaction history in one clean view.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon-wrap">🆔</div>
+                <h3>Fast KYC Verification</h3>
+                <p>Submit your ID once and get verified within 48 hours. Fully secure and confidential process.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon-wrap">📞</div>
+                <h3>Dedicated Support</h3>
+                <p>Reach our team via WhatsApp or email any time. Real humans, real answers — no bots.</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Verify ID -->
-<section id="verify">
-    <div class="section-header"><h2>🆔 Verify Your Identity</h2><p>Required before trading</p></div>
-    <div class="form-card">
-        <h3>Upload Documents</h3>
-        <div class="form-group"><label>ID Type</label><select id="idType"><option value="">Select ID Type</option><option value="passport">International Passport</option><option value="national">National ID Card</option><option value="drivers">Driver's License</option><option value="voter">Voter's Card</option></select></div>
-        <div class="form-group"><label>ID Number</label><input type="text" id="idNumber" placeholder="Document number"></div>
-        <div class="upload-area" onclick="document.getElementById('idFront').click()"><div class="upload-icon-text">📄</div><p class="upload-text-small">ID Card (Front)</p><p class="file-name-display" id="idFrontName"></p><input type="file" id="idFront" accept="image/*" onchange="handleFile(event,'idFrontName')"></div>
-        <div class="upload-area" onclick="document.getElementById('idBack').click()"><div class="upload-icon-text">📄</div><p class="upload-text-small">ID Card (Back)</p><p class="file-name-display" id="idBackName"></p><input type="file" id="idBack" accept="image/*" onchange="handleFile(event,'idBackName')"></div>
-        <div class="upload-area" onclick="document.getElementById('faceId').click()"><div class="upload-icon-text">🤳</div><p class="upload-text-small">Face ID (Clear Selfie)</p><p class="file-name-display" id="faceIdName"></p><input type="file" id="faceId" accept="image/*" onchange="handleFile(event,'faceIdName')"></div>
-        <button class="submit-btn" onclick="submitVerification()">Submit for Verification →</button>
-        <div class="success-msg" id="verifySuccess">✅ Documents submitted! 48-hour review in progress.</div>
+<!-- MARKETS -->
+<section class="markets-section" id="markets">
+    <div class="section-inner">
+        <div class="sec-header">
+            <div class="sec-label">Markets</div>
+            <h2>Trade Across Global Markets</h2>
+            <p>Diversify your portfolio across the world's most traded asset classes.</p>
+        </div>
+        <div class="markets-tabs">
+            <button class="mktab active">All</button>
+            <button class="mktab">Forex</button>
+            <button class="mktab">Crypto</button>
+            <button class="mktab">Metals</button>
+            <button class="mktab">Indices</button>
+        </div>
+        <div class="markets-grid">
+            <div class="mkt-card">
+                <div class="mkt-card-icon">💱</div>
+                <h4>Forex</h4>
+                <p>60+ major, minor & exotic currency pairs</p>
+                <span class="mkt-badge">Most Popular</span>
+            </div>
+            <div class="mkt-card">
+                <div class="mkt-card-icon">₿</div>
+                <h4>Cryptocurrency</h4>
+                <p>BTC, ETH, SOL, XRP and top altcoins</p>
+                <span class="mkt-badge">High Volatility</span>
+            </div>
+            <div class="mkt-card">
+                <div class="mkt-card-icon">🥇</div>
+                <h4>Gold & Metals</h4>
+                <p>XAU, XAG, copper and precious metals</p>
+                <span class="mkt-badge">Safe Haven</span>
+            </div>
+            <div class="mkt-card">
+                <div class="mkt-card-icon">📊</div>
+                <h4>Indices</h4>
+                <p>S&P 500, NASDAQ, FTSE 100 & more</p>
+                <span class="mkt-badge">Global</span>
+            </div>
+            <div class="mkt-card">
+                <div class="mkt-card-icon">🛢️</div>
+                <h4>Commodities</h4>
+                <p>Oil, natural gas & agricultural products</p>
+                <span class="mkt-badge">Diversify</span>
+            </div>
+            <div class="mkt-card">
+                <div class="mkt-card-icon">📈</div>
+                <h4>CFD Shares</h4>
+                <p>Trade shares of leading global companies</p>
+                <span class="mkt-badge">Stocks</span>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- DASHBOARD -->
+<section class="dashboard-section" id="dashboard">
+    <div class="section-inner">
+        <div class="dashboard-wrap">
+            <div class="dashboard-info">
+                <div class="sec-label">Your Account</div>
+                <h2>Track Every Move in Your Dashboard</h2>
+                <p>Monitor your live balance, active investments, pending withdrawals and full transaction history — all in one place, updated in real time.</p>
+                <div class="dash-actions">
+                    <a href="javascript:void(0)" class="btn-hero-primary" onclick="openModal('signupModal')">Open Account</a>
+                    <a href="javascript:void(0)" class="btn-hero-outline" onclick="openModal('loginModal')">Log In</a>
+                </div>
+            </div>
+            <div>
+                <div class="dash-grid">
+                    <div class="dash-card">
+                        <div class="dash-card-label">Portfolio Balance</div>
+                        <div class="dash-card-value" id="userBalance">$0.00</div>
+                        <div class="dash-card-sub up" id="userChange">Log in to view</div>
+                    </div>
+                    <div class="dash-card">
+                        <div class="dash-card-label">Active Investments</div>
+                        <div class="dash-card-value" id="activeInvestments">0</div>
+                        <div class="dash-card-sub" style="color:var(--muted);">Approved deposits</div>
+                    </div>
+                    <div class="dash-card">
+                        <div class="dash-card-label">Pending Withdrawals</div>
+                        <div class="dash-card-value" id="pendingWithdrawals">$0.00</div>
+                        <div class="dash-card-sub" style="color:var(--muted);" id="holdStatus">No pending requests</div>
+                    </div>
+                    <div class="dash-card" style="background:rgba(200,168,75,0.05);border-color:var(--border2);">
+                        <div class="dash-card-label">Account Status</div>
+                        <div class="dash-card-value" style="font-size:20px;" id="verifiedStatus">—</div>
+                        <div class="dash-card-sub" style="color:var(--muted);">KYC verification</div>
+                    </div>
+                </div>
+
+                <!-- Hold Timer -->
+                <div class="hold-timer" id="holdTimerBox" style="display:none;">
+                    <div class="timer-label">Withdrawal Processing In</div>
+                    <div class="timer-number" id="timerDisplay">48:00:00</div>
+                    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Date</th><th>Type</th><th>Amount</th><th>Status</th></tr></thead>
+                        <tbody id="transactionTable">
+                            <tr><td colspan="4" style="text-align:center;padding:36px;color:var(--muted);">Log in to view transactions.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DEPOSIT -->
+<section class="deposit-section" id="deposit">
+    <div class="section-inner">
+        <div class="deposit-wrap">
+            <div class="deposit-info">
+                <div class="sec-label">Fund Your Account</div>
+                <h2>Fast & Secure Deposits</h2>
+                <p>Fund your account instantly using your Visa or Mastercard via Flutterwave — one of the world's most trusted payment gateways. No hidden fees.</p>
+                <div class="deposit-perks">
+                    <div class="perk">
+                        <div class="perk-icon">⚡</div>
+                        <div class="perk-text"><strong>Instant Processing</strong><span>Funds credited after admin confirmation</span></div>
+                    </div>
+                    <div class="perk">
+                        <div class="perk-icon">🔒</div>
+                        <div class="perk-text"><strong>256-bit SSL Encryption</strong><span>Your card details are never stored</span></div>
+                    </div>
+                    <div class="perk">
+                        <div class="perk-icon">💳</div>
+                        <div class="perk-text"><strong>Visa & Mastercard Accepted</strong><span>All major cards supported globally</span></div>
+                    </div>
+                    <div class="perk">
+                        <div class="perk-icon">📋</div>
+                        <div class="perk-text"><strong>Minimum $100</strong><span>Start building your portfolio today</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="deposit-form">
+                <h3>💰 Make a Deposit</h3>
+                <div class="pay-box">
+                    <div class="card-icons">💳 🏦 🔐</div>
+                    <div class="pay-provider">Secure Payment via</div>
+                    <div class="pay-name">Flutterwave Gateway</div>
+                    <a id="flutterwaveBtn" href="https://flutterwave.com/pay/mlf7bn34ikyi" target="_blank" class="pay-now-btn">
+                        💳 &nbsp;Pay Now via Card
+                    </a>
+                    <div class="pay-secure"><span class="lock">🔒</span> 256-bit SSL • PCI DSS Compliant</div>
+                </div>
+                <div class="form-group">
+                    <label>Amount Paid (USD)</label>
+                    <input type="number" id="depositAmount" placeholder="e.g. 500" min="100">
+                </div>
+                <div class="upload-area" onclick="document.getElementById('depositReceipt').click()">
+                    <div class="upload-icon">📎</div>
+                    <div class="upload-label">Upload Payment Receipt (optional)</div>
+                    <div class="upload-name" id="depositFileName"></div>
+                    <input type="file" id="depositReceipt" accept="image/*,.pdf" onchange="handleFile(event,'depositFileName')">
+                </div>
+                <button class="submit-btn" onclick="submitDeposit()">Submit Deposit →</button>
+                <div class="success-msg" id="depositSuccess">✅ Deposit submitted! Our team will confirm shortly.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WITHDRAW -->
+<section class="withdraw-section" id="withdraw">
+    <div class="section-inner">
+        <div class="sec-header">
+            <div class="sec-label">Withdraw Funds</div>
+            <h2>Request a Withdrawal</h2>
+            <p>Withdrawals are processed within 48 hours after submission and admin review.</p>
+        </div>
+        <div style="max-width:600px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Amount (USD)</label>
+                    <input type="number" id="withdrawAmount" placeholder="e.g. 200">
+                </div>
+                <div class="form-group">
+                    <label>Bank Name</label>
+                    <input type="text" id="withdrawBank" placeholder="e.g. Zenith Bank">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Account Number</label>
+                    <input type="text" id="withdrawAccount" placeholder="Your account number">
+                </div>
+                <div class="form-group">
+                    <label>Account Name</label>
+                    <input type="text" id="withdrawAccountName" placeholder="Full name on account">
+                </div>
+            </div>
+            <div class="upload-area" onclick="document.getElementById('withdrawFace').click()">
+                <div class="upload-icon">🤳</div>
+                <div class="upload-label">Upload Face ID Selfie (required)</div>
+                <div class="upload-name" id="withdrawFileName"></div>
+                <input type="file" id="withdrawFace" accept="image/*" onchange="handleFile(event,'withdrawFileName')">
+            </div>
+            <button class="submit-btn" onclick="submitWithdrawal()">Submit Withdrawal Request →</button>
+            <div class="success-msg" id="withdrawSuccess">✅ Withdrawal request submitted! 48-hour processing begins now.</div>
+        </div>
+    </div>
+</section>
+
+<!-- VERIFY -->
+<section class="verify-section" id="verify">
+    <div class="section-inner">
+        <div class="sec-header">
+            <div class="sec-label">KYC Verification</div>
+            <h2>Verify Your Identity</h2>
+            <p>Complete KYC to unlock full account features. Reviewed within 48 hours.</p>
+        </div>
+        <div style="max-width:600px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>ID Type</label>
+                    <select id="idType">
+                        <option value="">Select ID type</option>
+                        <option value="National ID">National ID</option>
+                        <option value="Passport">Passport</option>
+                        <option value="Driver's License">Driver's License</option>
+                        <option value="Voter's Card">Voter's Card</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>ID Number</label>
+                    <input type="text" id="idNumber" placeholder="Enter ID number">
+                </div>
+            </div>
+            <div class="upload-area" onclick="document.getElementById('idFront').click()">
+                <div class="upload-icon">📄</div>
+                <div class="upload-label">ID Front Side</div>
+                <div class="upload-name" id="idFrontName"></div>
+                <input type="file" id="idFront" accept="image/*" onchange="handleFile(event,'idFrontName')">
+            </div>
+            <div class="upload-area" onclick="document.getElementById('idBack').click()">
+                <div class="upload-icon">📄</div>
+                <div class="upload-label">ID Back Side</div>
+                <div class="upload-name" id="idBackName"></div>
+                <input type="file" id="idBack" accept="image/*" onchange="handleFile(event,'idBackName')">
+            </div>
+            <div class="upload-area" onclick="document.getElementById('faceId').click()">
+                <div class="upload-icon">🤳</div>
+                <div class="upload-label">Face ID — Clear Selfie</div>
+                <div class="upload-name" id="faceIdName"></div>
+                <input type="file" id="faceId" accept="image/*" onchange="handleFile(event,'faceIdName')">
+            </div>
+            <button class="submit-btn" onclick="submitVerification()">Submit for Verification →</button>
+            <div class="success-msg" id="verifySuccess">✅ Documents submitted! 48-hour review in progress.</div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+    <div class="section-inner">
+        <div class="sec-header">
+            <div class="sec-label">FAQ</div>
+            <h2>Frequently Asked Questions</h2>
+            <p>Still need help? Contact us via WhatsApp or email anytime.</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">How do I start trading with Merdinia Capital? <span class="arrow">▾</span></button>
+                <div class="faq-a"><div class="faq-a-inner">Click "Open Account", fill in your details and create your account. Then make a minimum deposit of $100 via Flutterwave card. Once your deposit is confirmed by our team, your balance is credited and you're live.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">How long do withdrawals take? <span class="arrow">▾</span></button>
+                <div class="faq-a"><div class="faq-a-inner">Withdrawals are processed within 48 hours of submission. Once approved by our admin team, funds are sent directly to your registered bank account. You'll see a countdown timer on your dashboard after submitting.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">Why do I need to verify my ID? <span class="arrow">▾</span></button>
+                <div class="faq-a"><div class="faq-a-inner">KYC (Know Your Customer) verification is a standard financial requirement to protect all users and comply with anti-fraud regulations. It's a one-time process reviewed within 48 hours.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">What is the minimum deposit? <span class="arrow">▾</span></button>
+                <div class="faq-a"><div class="faq-a-inner">The minimum deposit is $100 USD. You can deposit more at any time to increase your managed portfolio allocation.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">Is my money safe with Merdinia Capital? <span class="arrow">▾</span></button>
+                <div class="faq-a"><div class="faq-a-inner">Client funds are held in segregated accounts and all payments are processed through Flutterwave's PCI-DSS compliant gateway. Our platform uses 256-bit SSL encryption for all data.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)">How do I contact support? <span class="arrow">▾</span></button>
+                <div class="faq-a"><div class="faq-a-inner">Reach our team 24/7 via WhatsApp at +44 7828 751507 or email us at mena352_5@zohomail.com. We respond to all messages within a few hours.</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER CTA -->
+<div class="footer-cta">
+    <div class="sec-label">Ready to Invest?</div>
+    <h2>Tight Spreads. Expert Management.<br>Real Returns.</h2>
+    <p>Join over 3,200 investors already growing their capital with Merdinia.</p>
+    <div class="footer-cta-btns">
+        <a href="javascript:void(0)" class="btn-hero-primary" onclick="openModal('signupModal')">Create Live Account →</a>
+        <a href="javascript:void(0)" class="btn-hero-outline" onclick="openModal('loginModal')">Log In to Dashboard</a>
+    </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
     <div class="footer-grid">
-        <div class="footer-col"><h4>🏦 Merdinia Capital</h4><p>Your trusted partner for Forex & Crypto trading. Global reach, local trust.</p></div>
-        <div class="footer-col"><h4>Quick Links</h4><a href="#features">Features</a><a href="#dashboard">Dashboard</a><a href="#deposit">Deposit</a><a href="#withdraw">Withdraw</a><a href="#verify">Verify ID</a></div>
-        <div class="footer-col" id="footerContact"><h4>Contact</h4><p>📧 mena352_5@zohomail.com</p><p>📞 +44 7828 751507</p></div>
+        <div class="footer-brand">
+            <div class="logo-wrap">
+                <div class="logo-mark">MC</div>
+                <span class="logo-name">Merdinia<span>Capital</span></span>
+            </div>
+            <p>Your trusted global partner for Forex & Crypto investment. Secure card payments, expert management, real returns.</p>
+        </div>
+        <div class="footer-col">
+            <h5>Trading</h5>
+            <a href="#markets">Forex</a>
+            <a href="#markets">Cryptocurrency</a>
+            <a href="#markets">Gold & Metals</a>
+            <a href="#markets">Indices</a>
+            <a href="#markets">Commodities</a>
+        </div>
+        <div class="footer-col">
+            <h5>Accounts</h5>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#deposit">Deposit</a>
+            <a href="#withdraw">Withdraw</a>
+            <a href="#verify">Verify ID</a>
+        </div>
+        <div class="footer-col" id="footerContact">
+            <h5>Contact</h5>
+            <a href="mailto:mena352_5@zohomail.com">📧 mena352_5@zohomail.com</a>
+            <a href="https://wa.me/447828751507" target="_blank">📞 +44 7828 751507</a>
+        </div>
     </div>
-    <div class="footer-bottom"><p>© 2026 Merdinia Capital. All rights reserved. | <a href="#" onclick="openModal('adminLoginModal')" style="color:var(--text-muted);cursor:pointer;">🔑 Admin</a></p></div>
+    <div class="footer-bottom">
+        <p>© 2026 Merdinia Capital. All rights reserved.</p>
+        <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="javascript:void(0)" class="admin-link" onclick="openModal('adminLoginModal')">🔑 Admin</a>
+        </div>
+    </div>
 </footer>
 
-<!-- Sign Up Modal -->
-<div class="modal-overlay" id="signupModal"><div class="modal">
-    <button class="modal-close" onclick="closeModal('signupModal')">✕</button>
-    <h2>Create Account</h2>
-    <div class="form-row"><div class="form-group"><label>Full Name</label><input type="text" id="signupName" placeholder="John Doe"></div><div class="form-group"><label>Email</label><input type="email" id="signupEmail" placeholder="you@email.com"></div></div>
-    <div class="form-row"><div class="form-group"><label>Phone</label><input type="tel" id="signupPhone" placeholder="+1 234 567 8900"></div><div class="form-group"><label>Country</label><select id="signupCountry"><option value="">Select</option><option value="NG">🇳🇬 Nigeria</option><option value="GH">🇬🇭 Ghana</option><option value="KE">🇰🇪 Kenya</option><option value="ZA">🇿🇦 South Africa</option><option value="US">🇺🇸 United States</option><option value="GB">🇬🇧 United Kingdom</option><option value="CA">🇨🇦 Canada</option><option value="AE">🇦🇪 UAE</option><option value="DE">🇩🇪 Germany</option><option value="FR">🇫🇷 France</option><option value="Other">🌍 Other</option></select></div></div>
-    <div class="form-group"><label>Password</label><input type="password" id="signupPassword" placeholder="Min 6 characters"></div>
-    <button class="submit-btn" onclick="signupUser()">Create Account →</button>
-    <p style="text-align:center;margin-top:15px;font-size:13px;color:var(--text-muted);">Already have an account? <a href="#" class="modal-link" onclick="switchModal('signupModal','loginModal')">Log In</a></p>
-</div></div>
-
-<!-- Login Modal -->
-<div class="modal-overlay" id="loginModal"><div class="modal">
-    <button class="modal-close" onclick="closeModal('loginModal')">✕</button>
-    <h2>Welcome Back</h2>
-    <div class="form-group"><label>Email</label><input type="email" id="loginEmail" placeholder="you@email.com"></div>
-    <div class="form-group"><label>Password</label><input type="password" id="loginPassword" placeholder="Enter password"></div>
-    <button class="submit-btn" onclick="loginUser()">Log In →</button>
-    <p style="text-align:center;margin-top:15px;font-size:13px;color:var(--text-muted);">Don't have an account? <a href="#" class="modal-link" onclick="switchModal('loginModal','signupModal')">Sign Up</a></p>
-</div></div>
-
-<!-- Admin Login Modal -->
-<div class="modal-overlay" id="adminLoginModal"><div class="modal">
-    <button class="modal-close" onclick="closeModal('adminLoginModal')">✕</button>
-    <h2>🔐 Admin Login</h2>
-    <div class="form-group"><label>Username</label><input type="text" id="adminUser" placeholder="Enter username"></div>
-    <div class="form-group"><label>Password</label><input type="password" id="adminPass" placeholder="Enter password"></div>
-    <button class="submit-btn" onclick="adminLogin()">Access Admin Panel</button>
-    <p id="adminError" style="color:var(--danger);text-align:center;margin-top:10px;display:none;">Invalid credentials! Username: The creator | Password: Doreen56?</p>
-</div></div>
-
-<!-- Admin Panel Modal -->
-<div class="modal-overlay" id="adminPanelModal"><div class="modal" style="max-width:750px;">
-    <button class="modal-close" onclick="closeModal('adminPanelModal')">✕</button>
-    <h2>🛠️ Admin Panel</h2>
-    <p style="text-align:center;color:var(--accent);margin-bottom:20px;">Welcome, Admin | <a href="#" onclick="adminLogout()" style="color:var(--danger);">Logout</a></p>
-    <div class="admin-tabs">
-        <button class="admin-tab active" onclick="switchAdminTab('settings')">⚙️ Settings</button>
-        <button class="admin-tab" onclick="switchAdminTab('users')">👥 Users</button>
-        <button class="admin-tab" onclick="switchAdminTab('deposits')">💰 Deposits</button>
-        <button class="admin-tab" onclick="switchAdminTab('withdrawals')">💸 Withdrawals</button>
-        <button class="admin-tab" onclick="switchAdminTab('verifications')">🆔 Verifications</button>
-        <button class="admin-tab" onclick="switchAdminTab('balances')">📊 Balances</button>
+<!-- SIGN UP MODAL -->
+<div class="modal-overlay" id="signupModal">
+    <div class="modal">
+        <button class="modal-close" onclick="closeModal('signupModal')">✕</button>
+        <h2>Create Account</h2>
+        <div class="form-row">
+            <div class="form-group"><label>Full Name</label><input type="text" id="signupName" placeholder="John Doe"></div>
+            <div class="form-group"><label>Email</label><input type="email" id="signupEmail" placeholder="you@email.com"></div>
+        </div>
+        <div class="form-row">
+            <div class="form-group"><label>Phone</label><input type="tel" id="signupPhone" placeholder="+1 234 567 8900"></div>
+            <div class="form-group">
+                <label>Country</label>
+                <select id="signupCountry">
+                    <option value="">Select country</option>
+                    <option value="NG">🇳🇬 Nigeria</option>
+                    <option value="GH">🇬🇭 Ghana</option>
+                    <option value="KE">🇰🇪 Kenya</option>
+                    <option value="ZA">🇿🇦 South Africa</option>
+                    <option value="US">🇺🇸 United States</option>
+                    <option value="GB">🇬🇧 United Kingdom</option>
+                    <option value="CA">🇨🇦 Canada</option>
+                    <option value="AE">🇦🇪 UAE</option>
+                    <option value="DE">🇩🇪 Germany</option>
+                    <option value="FR">🇫🇷 France</option>
+                    <option value="Other">🌍 Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group"><label>Password</label><input type="password" id="signupPassword" placeholder="Min 6 characters"></div>
+        <button class="submit-btn" onclick="signupUser()">Create Account →</button>
+        <p style="text-align:center;margin-top:16px;font-size:13px;color:var(--muted);">Already have an account? <a href="javascript:void(0)" class="modal-link" onclick="switchModal('signupModal','loginModal')">Log In</a></p>
     </div>
-    <div class="admin-content active" id="tab-settings">
-        <h4 style="margin-bottom:15px;color:var(--accent);">⚙️ Admin Settings</h4>
-        <p style="font-size:12px;color:var(--text-muted);margin-bottom:20px;">Fill in your business details below. They appear on the customer deposit page and footer.</p>
-        <div class="form-group"><label>Company Display Name</label><input type="text" id="settingCompanyName" value="Merdinia Capital Investment"></div>
-        <div class="form-group"><label>Admin Email (for notifications)</label><input type="email" id="settingEmail" value="mena352_5@zohomail.com"></div>
-        <div class="form-group"><label>WhatsApp Number (optional, with country code)</label><input type="text" id="settingWhatsapp" value="+44 7828 751507"></div>
-        <div class="form-group"><label>Flutterwave Payment Link</label><input type="text" id="settingFlutterwaveLink" value="https://flutterwave.com/pay/mlf7bn34ikyi"></div>
-        <div class="form-group"><label>Bank Name (for bank transfers)</label><input type="text" id="settingBankName" placeholder="e.g., MoniePoint, Access Bank"></div>
-        <div class="form-group"><label>Bank Account Number</label><input type="text" id="settingAccountNumber" placeholder="e.g., 8052562742"></div>
-        <div class="form-group"><label>Account Holder Name</label><input type="text" id="settingAccountName" placeholder="e.g., Goodluck Ikoyo"></div>
-        <div class="form-group"><label>Business Address</label><textarea id="settingAddress" rows="2" placeholder="e.g., 123 Business Street, City, Country"></textarea></div>
-        <div class="form-group"><label>Crypto Wallet (for crypto deposits)</label><input type="text" id="settingCryptoWallet" placeholder="e.g., USDT (TRC20) wallet address"></div>
-        <button class="submit-btn" onclick="saveAdminSettings()">💾 Save Settings</button>
-        <div class="success-msg" id="settingsSaved">✅ Settings saved!</div>
+</div>
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="loginModal">
+    <div class="modal">
+        <button class="modal-close" onclick="closeModal('loginModal')">✕</button>
+        <h2>Welcome Back</h2>
+        <div class="form-group"><label>Email</label><input type="email" id="loginEmail" placeholder="you@email.com"></div>
+        <div class="form-group"><label>Password</label><input type="password" id="loginPassword" placeholder="Enter password"></div>
+        <button class="submit-btn" onclick="loginUser()">Log In →</button>
+        <p style="text-align:center;margin-top:16px;font-size:13px;color:var(--muted);">No account? <a href="javascript:void(0)" class="modal-link" onclick="switchModal('loginModal','signupModal')">Sign Up</a></p>
     </div>
-    <div class="admin-content" id="tab-users"><h4 style="margin-bottom:15px;">Registered Users</h4><div id="adminUsersList" style="font-size:13px;color:var(--text-muted);">No users yet.</div></div>
-    <div class="admin-content" id="tab-deposits"><h4 style="margin-bottom:15px;">Pending Deposits</h4><div id="adminDepositsList" style="font-size:13px;color:var(--text-muted);">No pending deposits.</div></div>
-    <div class="admin-content" id="tab-withdrawals"><h4 style="margin-bottom:15px;">Pending Withdrawals</h4><div id="adminWithdrawalsList" style="font-size:13px;color:var(--text-muted);">No pending withdrawals.</div></div>
-    <div class="admin-content" id="tab-verifications"><h4 style="margin-bottom:15px;">ID Verifications</h4><div id="adminVerificationsList" style="font-size:13px;color:var(--text-muted);">No pending verifications.</div></div>
-    <div class="admin-content" id="tab-balances">
-        <h4 style="margin-bottom:15px;">Update User Balance</h4>
-        <div class="form-group"><label>Select User</label><select id="balanceUserSelect" style="width:100%;padding:12px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;color:#fff;"><option value="">Select User</option></select></div>
-        <div class="form-group"><label>New Balance ($)</label><input type="number" id="newBalanceAmount" placeholder="Enter new balance"></div>
-        <button class="submit-btn" onclick="updateUserBalance()">Update Balance</button>
-        <p style="font-size:11px;color:var(--text-muted);margin-top:8px;">Manually overrides the user's balance display.</p>
+</div>
+
+<!-- ADMIN LOGIN MODAL -->
+<div class="modal-overlay" id="adminLoginModal">
+    <div class="modal">
+        <button class="modal-close" onclick="closeModal('adminLoginModal')">✕</button>
+        <h2>🔐 Admin Login</h2>
+        <div class="form-group"><label>Username</label><input type="text" id="adminUser" placeholder="Enter username"></div>
+        <div class="form-group"><label>Password</label><input type="password" id="adminPass" placeholder="Enter password"></div>
+        <button class="submit-btn" onclick="adminLogin()">Access Admin Panel</button>
+        <p id="adminError" style="color:var(--red);text-align:center;margin-top:10px;display:none;">Invalid credentials. Please try again.</p>
     </div>
-</div></div>
+</div>
+
+<!-- ADMIN PANEL MODAL -->
+<div class="modal-overlay" id="adminPanelModal">
+    <div class="modal modal-wide">
+        <button class="modal-close" onclick="closeModal('adminPanelModal')">✕</button>
+        <h2>🛠️ Admin Panel</h2>
+        <p style="text-align:center;color:var(--gold);margin-bottom:20px;font-size:13px;">Welcome, Admin &nbsp;|&nbsp; <a href="javascript:void(0)" onclick="adminLogout()" style="color:var(--red);">Logout</a></p>
+        <div class="admin-tabs">
+            <button class="admin-tab active" onclick="switchAdminTab('settings')">⚙️ Settings</button>
+            <button class="admin-tab" onclick="switchAdminTab('users')">👥 Users</button>
+            <button class="admin-tab" onclick="switchAdminTab('deposits')">💰 Deposits</button>
+            <button class="admin-tab" onclick="switchAdminTab('withdrawals')">💸 Withdrawals</button>
+            <button class="admin-tab" onclick="switchAdminTab('verifications')">🆔 Verifications</button>
+            <button class="admin-tab" onclick="switchAdminTab('balances')">📊 Balances</button>
+        </div>
+
+        <div class="admin-content active" id="tab-settings">
+            <h4 style="margin-bottom:14px;color:var(--gold);font-size:14px;">⚙️ Site Settings</h4>
+            <div class="form-group"><label>Company Display Name</label><input type="text" id="settingCompanyName" value="Merdinia Capital Investment"></div>
+            <div class="form-group"><label>Admin Email</label><input type="email" id="settingEmail" value="mena352_5@zohomail.com"></div>
+            <div class="form-group"><label>WhatsApp Number</label><input type="text" id="settingWhatsapp" value="+44 7828 751507"></div>
+            <div class="form-group"><label>Flutterwave Payment Link</label><input type="text" id="settingFlutterwaveLink" value="https://flutterwave.com/pay/mlf7bn34ikyi"></div>
+            <div class="form-group"><label>Business Address</label><textarea id="settingAddress" rows="2" placeholder="e.g. 123 Business Street, City, Country"></textarea></div>
+            <button class="submit-btn" onclick="saveAdminSettings()">💾 Save Settings</button>
+            <div class="success-msg" id="settingsSaved">✅ Settings saved!</div>
+        </div>
+
+        <div class="admin-content" id="tab-users">
+            <h4 style="margin-bottom:14px;">Registered Users</h4>
+            <div id="adminUsersList" style="font-size:13px;color:var(--muted);">No users yet.</div>
+        </div>
+
+        <div class="admin-content" id="tab-deposits">
+            <h4 style="margin-bottom:14px;">Deposits</h4>
+            <div id="adminDepositsList" style="font-size:13px;color:var(--muted);">No deposits yet.</div>
+        </div>
+
+        <div class="admin-content" id="tab-withdrawals">
+            <h4 style="margin-bottom:14px;">Withdrawals</h4>
+            <div id="adminWithdrawalsList" style="font-size:13px;color:var(--muted);">No withdrawals yet.</div>
+        </div>
+
+        <div class="admin-content" id="tab-verifications">
+            <h4 style="margin-bottom:14px;">ID Verifications</h4>
+            <div id="adminVerificationsList" style="font-size:13px;color:var(--muted);">No verifications yet.</div>
+        </div>
+
+        <div class="admin-content" id="tab-balances">
+            <h4 style="margin-bottom:14px;">Update User Balance</h4>
+            <div class="form-group">
+                <label>Select User</label>
+                <select id="balanceUserSelect" style="width:100%;padding:12px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:#fff;font-family:'DM Sans',sans-serif;">
+                    <option value="">Select User</option>
+                </select>
+            </div>
+            <div class="form-group"><label>New Balance ($)</label><input type="number" id="newBalanceAmount" placeholder="Enter new balance"></div>
+            <button class="submit-btn" onclick="updateUserBalance()">Update Balance</button>
+        </div>
+    </div>
+</div>
 
 <script>
 // ============ DATA HELPERS ============
@@ -508,27 +1506,44 @@ function getData(k){return JSON.parse(localStorage.getItem('merdinia_'+k))||[];}
 function saveData(k,d){localStorage.setItem('merdinia_'+k,JSON.stringify(d));}
 function getSettings(){return JSON.parse(localStorage.getItem('merdinia_settings'))||{};}
 function saveSettings(s){localStorage.setItem('merdinia_settings',JSON.stringify(s));}
+function esc(s){var d=document.createElement('div');d.appendChild(document.createTextNode(String(s==null?'':s)));return d.innerHTML;}
 
 let currentUser=null;
 let isAdmin=false;
+
+// ============ MOBILE NAV ============
+function toggleMobileNav(){document.getElementById('mobileDrawer').classList.toggle('open');}
+
+// ============ MARKET TABS ============
+document.querySelectorAll('.mktab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+        document.querySelectorAll('.mktab').forEach(function(t){t.classList.remove('active');});
+        tab.classList.add('active');
+    });
+});
+
+// ============ FAQ ============
+function toggleFaq(btn){
+    var ans=btn.nextElementSibling;
+    var isOpen=ans.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(function(a){a.classList.remove('open');});
+    document.querySelectorAll('.faq-q').forEach(function(q){q.classList.remove('open');});
+    if(!isOpen){ans.classList.add('open');btn.classList.add('open');}
+}
 
 // ============ MODALS ============
 function openModal(id){document.getElementById(id).classList.add('active');}
 function closeModal(id){document.getElementById(id).classList.remove('active');}
 function switchModal(c,o){closeModal(c);openModal(o);}
 
-// ============ MOBILE MENU ============
-function toggleMobileMenu(){
-    var n=document.getElementById('navLinks');
-    if(n.style.display==='flex'){n.style.display='none';}
-    else{n.style.display='flex';n.style.flexDirection='column';n.style.position='absolute';n.style.top='70px';n.style.left='0';n.style.width='100%';n.style.background='rgba(6,11,31,0.98)';n.style.padding='20px';n.style.gap='15px';n.style.zIndex='999';}
-}
-
 // ============ FILE HANDLING ============
 function handleFile(e,id){var f=e.target.files[0];if(f)document.getElementById(id).textContent='📎 '+f.name;}
 
+// ============ HASH HELPER ============
+async function _hash(s){var b=new TextEncoder().encode(s);var h=await crypto.subtle.digest('SHA-256',b);return Array.from(new Uint8Array(h)).map(function(x){return x.toString(16).padStart(2,'0');}).join('');}
+
 // ============ AUTH ============
-function signupUser(){
+async function signupUser(){
     var n=document.getElementById('signupName').value.trim();
     var e=document.getElementById('signupEmail').value.trim();
     var p=document.getElementById('signupPhone').value.trim();
@@ -538,18 +1553,20 @@ function signupUser(){
     if(pw.length<6)return alert('Password must be at least 6 characters!');
     var users=getData('users');
     if(users.find(function(u){return u.email===e;}))return alert('Email already registered!');
-    var user={id:Date.now(),name:n,email:e,phone:p,country:c,password:pw,balance:0,verified:false,createdAt:new Date().toLocaleString()};
+    var pwHash=await _hash(pw);
+    var user={id:Date.now(),name:n,email:e,phone:p,country:c,password:pwHash,balance:0,verified:false,createdAt:new Date().toLocaleString()};
     users.push(user);saveData('users',users);
     currentUser=user;localStorage.setItem('merdinia_currentUser',user.id);
     closeModal('signupModal');updateDashboard();
     alert('Account created! Please verify your ID to start trading.');
 }
 
-function loginUser(){
+async function loginUser(){
     var e=document.getElementById('loginEmail').value.trim();
     var pw=document.getElementById('loginPassword').value;
+    var pwHash=await _hash(pw);
     var users=getData('users');
-    var user=users.find(function(u){return u.email===e&&u.password===pw;});
+    var user=users.find(function(u){return u.email===e&&u.password===pwHash;});
     if(user){currentUser=user;localStorage.setItem('merdinia_currentUser',user.id);closeModal('loginModal');updateDashboard();alert('Welcome back, '+user.name+'!');}
     else{alert('Invalid email or password!');}
 }
@@ -558,14 +1575,13 @@ function loginUser(){
 function submitDeposit(){
     if(!currentUser)return alert('Please log in first!');
     var amt=parseFloat(document.getElementById('depositAmount').value);
-    var met=document.getElementById('depositMethod').value;
     var rec=document.getElementById('depositReceipt');
-    if(!amt||amt<100)return alert('Minimum deposit is $100!');
+    if(!amt||amt<100)return alert('Please enter the amount you paid (minimum $100)!');
     var deposits=getData('deposits');
-    deposits.push({id:Date.now(),userId:currentUser.id,userName:currentUser.name,userEmail:currentUser.email,amount:amt,method:met,receiptName:rec.files[0]?rec.files[0].name:'No receipt',status:'pending',date:new Date().toLocaleString()});
+    deposits.push({id:Date.now(),userId:currentUser.id,userName:currentUser.name,userEmail:currentUser.email,amount:amt,method:'Card Payment (Flutterwave)',receiptName:rec.files[0]?rec.files[0].name:'No receipt',status:'pending',date:new Date().toLocaleString()});
     saveData('deposits',deposits);
     var s=getSettings();
-    if(s.whatsapp){window.open('https://wa.me/'+s.whatsapp.replace(/[^0-9]/g,'')+'?text='+encodeURIComponent('*📢 New Deposit*\n\n'+currentUser.name+' deposited $'+amt.toLocaleString()+' via '+met+'\n\n_Please verify in admin panel._'),'_blank');}
+    if(s.whatsapp){var waNum=s.whatsapp.replace(/[^0-9]/g,'');window.open('https://wa.me/'+waNum+'?text='+encodeURIComponent('*📢 New Card Deposit*\n\n'+currentUser.name+' deposited $'+amt.toLocaleString()+'\n\n_Please verify in admin panel._'),'_blank');}
     document.getElementById('depositSuccess').style.display='block';
     document.getElementById('depositAmount').value='';document.getElementById('depositReceipt').value='';document.getElementById('depositFileName').textContent='';
     setTimeout(function(){document.getElementById('depositSuccess').style.display='none';},5000);
@@ -591,15 +1607,17 @@ function submitWithdrawal(){
     updateDashboard();startHoldTimer(w);
 }
 
+var _holdTimerInterval=null;
 function startHoldTimer(w){
     var tb=document.getElementById('holdTimerBox');var td=document.getElementById('timerDisplay');var pf=document.getElementById('progressFill');
     tb.style.display='block';
+    if(_holdTimerInterval)clearInterval(_holdTimerInterval);
     function upd(){var now=Date.now();var rem=w.holdEnd-now;
-        if(rem<=0){td.textContent='00:00:00';pf.style.width='100%';pf.style.background='var(--success)';return;}
-        var h=Math.floor(rem/(3600000));var m=Math.floor((rem%3600000)/60000);var s=Math.floor((rem%60000)/1000);
+        if(rem<=0){td.textContent='00:00:00';pf.style.width='100%';pf.style.background='var(--green)';clearInterval(_holdTimerInterval);_holdTimerInterval=null;return;}
+        var h=Math.floor(rem/3600000);var m=Math.floor((rem%3600000)/60000);var s=Math.floor((rem%60000)/1000);
         td.textContent=String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
         pf.style.width=(((48*3600000)-rem)/(48*3600000)*100)+'%';}
-    upd();setInterval(upd,1000);
+    upd();_holdTimerInterval=setInterval(upd,1000);
 }
 
 // ============ VERIFICATION ============
@@ -618,10 +1636,19 @@ function submitVerification(){
 
 // ============ DASHBOARD ============
 function updateDashboard(){
-    if(!currentUser){document.getElementById('userBalance').textContent='$0.00';document.getElementById('activeInvestments').textContent='0';document.getElementById('pendingWithdrawals').textContent='$0.00';document.getElementById('holdStatus').textContent='No pending requests';document.getElementById('transactionTable').innerHTML='<tr><td colspan="4" style="text-align:center;padding:40px;color:var(--text-muted);">Log in to view transactions.</td></tr>';return;}
+    if(!currentUser){
+        document.getElementById('userBalance').textContent='$0.00';
+        document.getElementById('activeInvestments').textContent='0';
+        document.getElementById('pendingWithdrawals').textContent='$0.00';
+        document.getElementById('holdStatus').textContent='No pending requests';
+        document.getElementById('verifiedStatus').textContent='—';
+        document.getElementById('transactionTable').innerHTML='<tr><td colspan="4" style="text-align:center;padding:36px;color:var(--muted);">Log in to view transactions.</td></tr>';
+        return;
+    }
     var users=getData('users');var u=users.find(function(x){return x.id===currentUser.id;});if(u)currentUser=u;
     document.getElementById('userBalance').textContent='$'+currentUser.balance.toLocaleString();
-    document.getElementById('userChange').textContent=currentUser.verified?'+ Active Account':'Verify ID to start';
+    document.getElementById('userChange').textContent=currentUser.verified?'✅ Active & Verified':'⚠️ Verify ID to unlock';
+    document.getElementById('verifiedStatus').textContent=currentUser.verified?'✅ Verified':'⚠️ Unverified';
     var deps=getData('deposits').filter(function(d){return d.userId===currentUser.id&&d.status==='completed';});
     document.getElementById('activeInvestments').textContent=deps.length;
     var wds=getData('withdrawals').filter(function(w){return w.userId===currentUser.id&&w.status==='hold';});
@@ -629,51 +1656,61 @@ function updateDashboard(){
     document.getElementById('holdStatus').textContent=wds.length>0?wds.length+' request(s) on hold':'No pending requests';
     var allD=getData('deposits').filter(function(d){return d.userId===currentUser.id;});
     var allW=getData('withdrawals').filter(function(w){return w.userId===currentUser.id;});
-    var tx=allD.map(function(d){d.type='Deposit';return d;}).concat(allW.map(function(w){w.type='Withdrawal';return w;}));
+    var tx=allD.map(function(d){return Object.assign({},d,{type:'Deposit'});}).concat(allW.map(function(w){return Object.assign({},w,{type:'Withdrawal'});}));
     tx.sort(function(a,b){return b.id-a.id;});
-    var html='';tx.slice(0,10).forEach(function(t){var sc=t.status==='completed'?'status-completed':t.status==='hold'?'status-hold':'status-pending';var st=t.status==='hold'?'On Hold':t.status;html+='<tr><td>'+t.date+'</td><td>'+t.type+'</td><td>$'+t.amount.toLocaleString()+'</td><td><span class="status-badge '+sc+'">'+st+'</span></td></tr>';});
-    if(tx.length===0)html='<tr><td colspan="4" style="text-align:center;padding:40px;color:var(--text-muted);">No transactions yet. Make a deposit!</td></tr>';
+    var html='';
+    tx.slice(0,10).forEach(function(t){
+        var sc=t.status==='completed'?'status-completed':t.status==='hold'?'status-hold':'status-pending';
+        var st=t.status==='hold'?'On Hold':esc(t.status);
+        html+='<tr><td>'+esc(t.date)+'</td><td>'+esc(t.type)+'</td><td>$'+esc(t.amount.toLocaleString())+'</td><td><span class="status-badge '+sc+'">'+st+'</span></td></tr>';
+    });
+    if(tx.length===0)html='<tr><td colspan="4" style="text-align:center;padding:36px;color:var(--muted);">No transactions yet.</td></tr>';
     document.getElementById('transactionTable').innerHTML=html;
+
+    // Update flutterwave link dynamically
+    var s=getSettings();
+    if(s.flutterwaveLink)document.getElementById('flutterwaveBtn').href=s.flutterwaveLink;
 }
 
 // ============ ADMIN LOGIN ============
-function adminLogin(){
+// Credentials stored as SHA-256 hashes only. "The creator" / "Doreen56?"
+var _AH={u:'ecd73fb1e8ee6bb1b16fecaae063ef9fa689e3371ee743f88f8ce24d4c90c199',p:'686d3b29b43e1744d7e8e517120fb2dd71b6281e90216d14cfebcd2aaee8b4b7'};
+async function adminLogin(){
     var user=document.getElementById('adminUser').value.trim();
     var pass=document.getElementById('adminPass').value;
-    if(user==='The creator'&&pass==='Doreen56?'){
+    var uh=await _hash(user);var ph=await _hash(pass);
+    if(uh===_AH.u&&ph===_AH.p){
         isAdmin=true;closeModal('adminLoginModal');openModal('adminPanelModal');
         document.getElementById('adminError').style.display='none';loadAdminSettings();refreshAdminPanel();
     }else{document.getElementById('adminError').style.display='block';}
 }
 function adminLogout(){isAdmin=false;closeModal('adminPanelModal');}
+
 function loadAdminSettings(){
     var s=getSettings();
     document.getElementById('settingCompanyName').value=s.companyName||'Merdinia Capital Investment';
     document.getElementById('settingEmail').value=s.email||'mena352_5@zohomail.com';
     document.getElementById('settingWhatsapp').value=s.whatsapp||'+44 7828 751507';
     document.getElementById('settingFlutterwaveLink').value=s.flutterwaveLink||'https://flutterwave.com/pay/mlf7bn34ikyi';
-    document.getElementById('settingBankName').value=s.bankName||'';
-    document.getElementById('settingAccountNumber').value=s.accountNumber||'';
-    document.getElementById('settingAccountName').value=s.accountName||'';
     document.getElementById('settingAddress').value=s.address||'';
-    document.getElementById('settingCryptoWallet').value=s.cryptoWallet||'';
 }
+
 function saveAdminSettings(){
     var s={
         companyName:document.getElementById('settingCompanyName').value.trim(),
         email:document.getElementById('settingEmail').value.trim(),
         whatsapp:document.getElementById('settingWhatsapp').value.trim(),
         flutterwaveLink:document.getElementById('settingFlutterwaveLink').value.trim(),
-        bankName:document.getElementById('settingBankName').value.trim(),
-        accountNumber:document.getElementById('settingAccountNumber').value.trim(),
-        accountName:document.getElementById('settingAccountName').value.trim(),
-        address:document.getElementById('settingAddress').value.trim(),
-        cryptoWallet:document.getElementById('settingCryptoWallet').value.trim()
+        address:document.getElementById('settingAddress').value.trim()
     };
     saveSettings(s);
+    // Update footer contact
+    var fc=document.getElementById('footerContact');
+    if(fc&&s.email){fc.querySelector('a').href='mailto:'+s.email;fc.querySelector('a').textContent='📧 '+s.email;}
     document.getElementById('settingsSaved').style.display='block';
     setTimeout(function(){document.getElementById('settingsSaved').style.display='none';},3000);
 }
+
 function switchAdminTab(tab){
     document.querySelectorAll('.admin-tab').forEach(function(t){t.classList.remove('active');});
     document.querySelectorAll('.admin-content').forEach(function(c){c.classList.remove('active');});
@@ -682,34 +1719,71 @@ function switchAdminTab(tab){
     if(idx>=0){document.querySelectorAll('.admin-tab')[idx].classList.add('active');document.getElementById('tab-'+tab).classList.add('active');}
     refreshAdminPanel();
 }
+
 function refreshAdminPanel(){
     if(!isAdmin)return;
     var users=getData('users');
-    document.getElementById('adminUsersList').innerHTML=users.length===0?'No users yet.':users.map(function(u){return '<div class="admin-list-item" style="display:flex;justify-content:space-between;"><span>'+u.name+' ('+u.email+') - '+u.country+' - $'+u.balance.toLocaleString()+'</span><span class="status-badge '+(u.verified?'status-completed':'status-pending')+'">'+(u.verified?'Verified':'Unverified')+'</span></div>';}).join('');
+    document.getElementById('adminUsersList').innerHTML=users.length===0?'<p style="color:var(--muted)">No users yet.</p>':users.map(function(u){return '<div class="admin-list-item" style="display:flex;justify-content:space-between;align-items:center;"><span>'+esc(u.name)+' ('+esc(u.email)+') — '+esc(u.country)+' — <strong style="color:var(--gold)">$'+esc(u.balance.toLocaleString())+'</strong></span><span class="status-badge '+(u.verified?'status-completed':'status-pending')+'">'+(u.verified?'Verified':'Unverified')+'</span></div>';}).join('');
     var deposits=getData('deposits');
-    document.getElementById('adminDepositsList').innerHTML=deposits.length===0?'No pending deposits.':deposits.map(function(d){return '<div class="admin-list-item"><p><strong>'+d.userName+'</strong> - $'+d.amount.toLocaleString()+' - '+d.method+'</p><p style="font-size:11px;color:var(--text-muted);">Receipt: '+d.receiptName+' | '+d.date+'</p><button class="admin-action-btn btn-approve" onclick="approveDeposit('+d.id+')">Approve</button><button class="admin-action-btn btn-reject" onclick="rejectDeposit('+d.id+')">Reject</button><span class="status-badge '+(d.status==='completed'?'status-completed':d.status==='rejected'?'status-hold':'status-pending')+'">'+d.status+'</span></div>';}).join('');
+    document.getElementById('adminDepositsList').innerHTML=deposits.length===0?'<p style="color:var(--muted)">No deposits yet.</p>':deposits.map(function(d){return '<div class="admin-list-item"><p><strong>'+esc(d.userName)+'</strong> — $'+esc(d.amount.toLocaleString())+' — '+esc(d.method)+'</p><p style="font-size:11px;color:var(--muted);margin:3px 0 8px;">Receipt: '+esc(d.receiptName)+' | '+esc(d.date)+'</p><button class="admin-action-btn btn-approve" onclick="approveDeposit('+d.id+')">✓ Approve</button><button class="admin-action-btn btn-reject" onclick="rejectDeposit('+d.id+')">✕ Reject</button> <span class="status-badge '+(d.status==='completed'?'status-completed':d.status==='rejected'?'status-hold':'status-pending')+'">'+esc(d.status)+'</span></div>';}).join('');
     var withdrawals=getData('withdrawals');
-    document.getElementById('adminWithdrawalsList').innerHTML=withdrawals.length===0?'No pending withdrawals.':withdrawals.map(function(w){return '<div class="admin-list-item"><p><strong>'+w.userName+'</strong> - $'+w.amount.toLocaleString()+' - '+w.bank+' ('+w.account+')</p><p style="font-size:11px;color:var(--text-muted);">Face ID: '+w.faceFileName+' | '+w.date+'</p><button class="admin-action-btn btn-approve" onclick="approveWithdrawal('+w.id+')">Mark Paid</button><button class="admin-action-btn btn-reject" onclick="rejectWithdrawal('+w.id+')">Reject</button><span class="status-badge '+(w.status==='completed'?'status-completed':'status-hold')+'">'+w.status+'</span></div>';}).join('');
+    document.getElementById('adminWithdrawalsList').innerHTML=withdrawals.length===0?'<p style="color:var(--muted)">No withdrawals yet.</p>':withdrawals.map(function(w){return '<div class="admin-list-item"><p><strong>'+esc(w.userName)+'</strong> — $'+esc(w.amount.toLocaleString())+' — '+esc(w.bank)+' ('+esc(w.account)+')</p><p style="font-size:11px;color:var(--muted);margin:3px 0 8px;">Acct Name: '+esc(w.accountName)+' | '+esc(w.date)+'</p><button class="admin-action-btn btn-approve" onclick="approveWithdrawal('+w.id+')">✓ Mark Paid</button><button class="admin-action-btn btn-reject" onclick="rejectWithdrawal('+w.id+')">✕ Reject</button> <span class="status-badge '+(w.status==='completed'?'status-completed':'status-hold')+'">'+esc(w.status)+'</span></div>';}).join('');
     var verifications=getData('verifications');
-    document.getElementById('adminVerificationsList').innerHTML=verifications.length===0?'No pending verifications.':verifications.map(function(v){return '<div class="admin-list-item"><p><strong>'+v.userName+'</strong> - '+v.idType+': '+v.idNumber+'</p><button class="admin-action-btn btn-approve" onclick="approveVerification('+v.id+')">Approve</button><button class="admin-action-btn btn-reject" onclick="rejectVerification('+v.id+')">Reject</button><span class="status-badge '+(v.status==='approved'?'status-completed':'status-pending')+'">'+v.status+'</span></div>';}).join('');
+    document.getElementById('adminVerificationsList').innerHTML=verifications.length===0?'<p style="color:var(--muted)">No verifications yet.</p>':verifications.map(function(v){return '<div class="admin-list-item"><p><strong>'+esc(v.userName)+'</strong> — '+esc(v.idType)+': '+esc(v.idNumber)+'</p><p style="font-size:11px;color:var(--muted);margin:3px 0 8px;">'+esc(v.date)+'</p><button class="admin-action-btn btn-approve" onclick="approveVerification('+v.id+')">✓ Approve</button><button class="admin-action-btn btn-reject" onclick="rejectVerification('+v.id+')">✕ Reject</button> <span class="status-badge '+(v.status==='approved'?'status-completed':'status-pending')+'">'+esc(v.status)+'</span></div>';}).join('');
     var sel=document.getElementById('balanceUserSelect');
-    sel.innerHTML='<option value="">Select User</option>'+users.map(function(u){return '<option value="'+u.email+'">'+u.name+' ('+u.email+') - $'+u.balance.toLocaleString()+'</option>';}).join('');
+    sel.innerHTML='<option value="">Select User</option>'+users.map(function(u){return '<option value="'+esc(u.email)+'">'+esc(u.name)+' ('+esc(u.email)+') — $'+esc(u.balance.toLocaleString())+'</option>';}).join('');
 }
-function approveDeposit(id){var d=getData('deposits').find(function(x){return x.id===id;});if(d){d.status='completed';saveData('deposits',getData('deposits'));var u=getData('users').find(function(x){return x.id===d.userId;});if(u){u.balance+=d.amount;saveData('users',getData('users'));if(currentUser&&currentUser.id===u.id)currentUser=u;}updateDashboard();refreshAdminPanel();alert('Deposit approved for '+d.userName+'!');}}
-function rejectDeposit(id){var d=getData('deposits').find(function(x){return x.id===id;});if(d&&confirm('Reject deposit from '+d.userName+'?')){d.status='rejected';saveData('deposits',getData('deposits'));refreshAdminPanel();}}
-function approveWithdrawal(id){var w=getData('withdrawals').find(function(x){return x.id===id;});if(w){w.status='completed';saveData('withdrawals',getData('withdrawals'));var u=getData('users').find(function(x){return x.id===w.userId;});if(u){u.balance=Math.max(0,u.balance-w.amount);saveData('users',getData('users'));if(currentUser&&currentUser.id===u.id)currentUser=u;}updateDashboard();refreshAdminPanel();alert('Withdrawal marked PAID for '+w.userName+'. Send funds now!');}}
-function rejectWithdrawal(id){var w=getData('withdrawals').find(function(x){return x.id===id;});if(w&&confirm('Reject withdrawal from '+w.userName+'? Funds return to balance.')){w.status='rejected';saveData('withdrawals',getData('withdrawals'));refreshAdminPanel();}}
-function approveVerification(id){var v=getData('verifications').find(function(x){return x.id===id;});if(v){v.status='approved';saveData('verifications',getData('verifications'));var u=getData('users').find(function(x){return x.id===v.userId;});if(u){u.verified=true;saveData('users',getData('users'));}refreshAdminPanel();alert('ID verified for '+v.userName+'!');}}
-function rejectVerification(id){var v=getData('verifications').find(function(x){return x.id===id;});if(v&&confirm('Reject verification for '+v.userName+'?')){v.status='rejected';saveData('verifications',getData('verifications'));refreshAdminPanel();}}
-function updateUserBalance(){var email=document.getElementById('balanceUserSelect').value;var bal=parseFloat(document.getElementById('newBalanceAmount').value);if(!email||isNaN(bal))return alert('Select user and enter valid amount!');var u=getData('users').find(function(x){return x.email===email;});if(u){u.balance=bal;saveData('users',getData('users'));if(currentUser&&currentUser.id===u.id)currentUser=u;updateDashboard();refreshAdminPanel();alert('Balance updated for '+u.name+': $'+bal.toLocaleString());}}
+
+function approveDeposit(id){
+    var deposits=getData('deposits');var d=deposits.find(function(x){return x.id===id;});
+    if(d){d.status='completed';saveData('deposits',deposits);
+    var users=getData('users');var u=users.find(function(x){return x.id===d.userId;});
+    if(u){u.balance+=d.amount;saveData('users',users);if(currentUser&&currentUser.id===u.id)currentUser=u;}
+    updateDashboard();refreshAdminPanel();alert('✅ Deposit approved for '+d.userName+'!');}
+}
+function rejectDeposit(id){
+    var deposits=getData('deposits');var d=deposits.find(function(x){return x.id===id;});
+    if(d&&confirm('Reject deposit from '+d.userName+'?')){d.status='rejected';saveData('deposits',deposits);refreshAdminPanel();}
+}
+function approveWithdrawal(id){
+    var withdrawals=getData('withdrawals');var w=withdrawals.find(function(x){return x.id===id;});
+    if(w){w.status='completed';saveData('withdrawals',withdrawals);
+    var users=getData('users');var u=users.find(function(x){return x.id===w.userId;});
+    if(u){u.balance=Math.max(0,u.balance-w.amount);saveData('users',users);if(currentUser&&currentUser.id===u.id)currentUser=u;}
+    updateDashboard();refreshAdminPanel();alert('✅ Withdrawal marked PAID for '+w.userName+'. Send funds now!');}
+}
+function rejectWithdrawal(id){
+    var withdrawals=getData('withdrawals');var w=withdrawals.find(function(x){return x.id===id;});
+    if(w&&confirm('Reject withdrawal from '+w.userName+'?')){w.status='rejected';saveData('withdrawals',withdrawals);refreshAdminPanel();}
+}
+function approveVerification(id){
+    var verifications=getData('verifications');var v=verifications.find(function(x){return x.id===id;});
+    if(v){v.status='approved';saveData('verifications',verifications);
+    var users=getData('users');var u=users.find(function(x){return x.id===v.userId;});
+    if(u){u.verified=true;saveData('users',users);if(currentUser&&currentUser.id===u.id)currentUser=u;}
+    updateDashboard();refreshAdminPanel();alert('✅ ID verified for '+v.userName+'!');}
+}
+function rejectVerification(id){
+    var verifications=getData('verifications');var v=verifications.find(function(x){return x.id===id;});
+    if(v&&confirm('Reject verification for '+v.userName+'?')){v.status='rejected';saveData('verifications',verifications);refreshAdminPanel();}
+}
+function updateUserBalance(){
+    var email=document.getElementById('balanceUserSelect').value;
+    var bal=parseFloat(document.getElementById('newBalanceAmount').value);
+    if(!email||isNaN(bal))return alert('Select a user and enter a valid amount!');
+    var users=getData('users');var u=users.find(function(x){return x.email===email;});
+    if(u){u.balance=bal;saveData('users',users);if(currentUser&&currentUser.id===u.id)currentUser=u;updateDashboard();refreshAdminPanel();alert('✅ Balance updated for '+u.name+': $'+bal.toLocaleString());}
+}
 
 // ============ INIT ============
 function init(){
     var uid=localStorage.getItem('merdinia_currentUser');
     if(uid){var users=getData('users');currentUser=users.find(function(u){return u.id===parseInt(uid);})||null;updateDashboard();}
     if(currentUser){var wds=getData('withdrawals').filter(function(w){return w.userId===currentUser.id&&w.status==='hold';});if(wds.length>0)startHoldTimer(wds[0]);}
+    var s=getSettings();
+    if(s.flutterwaveLink)document.getElementById('flutterwaveBtn').href=s.flutterwaveLink;
 }
 init();
 </script>
 </body>
-    </html>
+</html>
